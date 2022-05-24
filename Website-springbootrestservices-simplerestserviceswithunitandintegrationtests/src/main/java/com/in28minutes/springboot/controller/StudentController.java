@@ -21,17 +21,20 @@ public class StudentController {
 	@Autowired
 	private StudentService studentService;
 
+	// {{url2}}/students/Student1/courses
 	@GetMapping("/students/{studentId}/courses")
 	public List<Course> retrieveCoursesForStudent(@PathVariable String studentId) {
 		return studentService.retrieveCourses(studentId);
 	}
-	
+
+	// {{url2}}/students/Student1/courses/Course2
 	@GetMapping("/students/{studentId}/courses/{courseId}")
 	public Course retrieveDetailsForCourse(@PathVariable String studentId,
 			@PathVariable String courseId) {
 		return studentService.retrieveCourse(studentId, courseId);
 	}
-	
+
+	// {{url2}}/students/Student1/courses
 	@PostMapping("/students/{studentId}/courses")
 	public ResponseEntity<Void> registerStudentForCourse(
 			@PathVariable String studentId, @RequestBody Course newCourse) {

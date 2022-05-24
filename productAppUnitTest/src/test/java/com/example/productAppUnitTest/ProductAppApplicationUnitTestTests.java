@@ -2,10 +2,12 @@ package com.example.productAppUnitTest;
 
 import com.example.productAppUnitTest.entity.Product;
 import com.example.productAppUnitTest.repository.ProductRepository;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 
@@ -17,6 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 //@DataJpaTest
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 class ProductAppApplicationUnitTestTests {
 
@@ -24,20 +27,22 @@ class ProductAppApplicationUnitTestTests {
     private ProductRepository productRepository;
 
     @Test
+    @Order(1)
     @Rollback(false)
     void testCreateProduct() {
         Product product = Product.builder()
-                .id(1L)
+                .id(7L)
                 .name("ZZZ")
                 .price(400.98)
                 .description("sssssssss")
                 .build();
         Product savedProduct = productRepository.save(product);
         assertNotNull(savedProduct);
-        assertNotNull(productRepository.findById(1L).get());
+        assertNotNull(productRepository.findById(7L).get());
     }
 
     @Test
+    @Order(2)
     @Rollback(false)
     void testListProducts() {
         List<Product> listOfProduct = productRepository.findAll();
@@ -45,6 +50,7 @@ class ProductAppApplicationUnitTestTests {
     }
 
     @Test
+    @Order(3)
     @Rollback(false)
     void findBId() {
 
@@ -54,6 +60,7 @@ class ProductAppApplicationUnitTestTests {
     }
 
     @Test
+    @Order(4)
     @Rollback(false)
     void testUpdate() {
         Product product = productRepository.findById(1L).get();
@@ -63,6 +70,7 @@ class ProductAppApplicationUnitTestTests {
     }
 
     @Test
+    @Order(5)
     @Rollback(false)
     void deleteById() {
         productRepository.deleteById(1L);
@@ -71,10 +79,11 @@ class ProductAppApplicationUnitTestTests {
 
 
     @Test
+    @Order(6)
     @Rollback(false)
     void testFindProductByName() {
-     String name = "ZZZ";
-     Product product = productRepository.findByName(name);
+        String name = "ZZZ";
+        Product product = productRepository.findByName(name);
         assertThat(product.getName().equals(name));
     }
 
@@ -94,7 +103,7 @@ class ProductAppApplicationUnitTestTests {
 
         String productName = "0004";
         Product product = Product.builder()
-               // .id(20L)  nie musi być
+                // .id(20L)  nie musi być
                 .name(productName)
                 .price(123.98)
                 .description("89898989")
@@ -125,7 +134,7 @@ class ProductAppApplicationUnitTestTests {
         List<Product> list = (List<Product>) productRepository.findAll();  //lub
         assertThat(list).size().isGreaterThan(0);
 
-        List<Product> list2 = (List<Product>) Optional.of( productRepository.findAll() ).orElseThrow(null);
+        List<Product> list2 = (List<Product>) Optional.of(productRepository.findAll()).orElseThrow(null);
         list2.forEach(Product::getPrice);
         list2.forEach(System.out::println);
         assertThat(list2).size().isGreaterThan(0);

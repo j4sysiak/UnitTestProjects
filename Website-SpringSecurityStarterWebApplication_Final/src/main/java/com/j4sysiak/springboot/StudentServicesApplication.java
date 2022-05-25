@@ -1,4 +1,4 @@
-package com.in28minutes.springboot;
+package com.j4sysiak.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

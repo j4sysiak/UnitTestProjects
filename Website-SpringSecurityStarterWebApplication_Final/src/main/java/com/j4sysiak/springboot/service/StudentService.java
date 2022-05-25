@@ -1,13 +1,13 @@
-package com.in28minutes.springboot.service;
+package com.j4sysiak.springboot.service;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.j4sysiak.springboot.model.Course;
 import org.springframework.stereotype.Component;
 
-import com.in28minutes.springboot.model.Course;
-import com.in28minutes.springboot.model.Student;
+import com.j4sysiak.springboot.model.Student;
 
 @Component
 public class StudentService {

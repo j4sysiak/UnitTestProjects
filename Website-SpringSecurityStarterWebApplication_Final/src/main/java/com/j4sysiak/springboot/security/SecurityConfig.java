@@ -1,4 +1,4 @@
-package com.in28minutes.springboot.security;
+package com.j4sysiak.springboot.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;

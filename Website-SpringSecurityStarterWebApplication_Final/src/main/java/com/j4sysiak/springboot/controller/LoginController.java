@@ -1,4 +1,4 @@
-package com.in28minutes.springboot.controller;
+package com.j4sysiak.springboot.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

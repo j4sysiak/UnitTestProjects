@@ -21,7 +21,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringJUnit4ClassRunner.class)
 public class HelloResourceTest {
 
-
     private MockMvc mockMvc;
 
     @Mock

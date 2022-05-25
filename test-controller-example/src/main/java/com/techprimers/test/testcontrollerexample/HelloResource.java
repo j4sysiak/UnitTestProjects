@@ -14,17 +14,20 @@ public class HelloResource {
     }
 
 
+    // {{url2}}/hello
     @GetMapping
     public String helloWorld() {
-        return helloService.hello();
+        return helloService.hello();   //  "Hello World";
     }
 
 
+    // {{url2}}/hello/json
     @GetMapping(value = "/json", produces = MediaType.APPLICATION_JSON_VALUE)
     public Hello json() {
         return new Hello("Greetings", "Hello World");
     }
 
+    // {{url2}}/hello/post
     @PostMapping(value = "/post", consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public Hello post(@RequestBody Hello hello) {

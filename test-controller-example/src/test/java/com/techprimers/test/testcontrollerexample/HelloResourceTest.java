@@ -10,6 +10,8 @@ import org.mockito.Mock;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import static org.mockito.Mockito.verify;
@@ -35,8 +37,17 @@ public class HelloResourceTest {
                 .build();
     }
 
+//    @Test
+//    public void testHelloWorld1() throws Exception {
+//
+//        mockMvc.perform(MockMvcRequestBuilders.get("/hello"))
+//                .andExpect(MockMvcResultMatchers.status().isOk())
+//                .andExpect(MockMvcResultMatchers.content().string("Hello Worl"));
+//
+//    }
+
     @Test
-    public void testHelloWorld() throws Exception {
+    public void testHelloWorld2() throws Exception {
 
         when(helloService.hello()).thenReturn("hello");
 

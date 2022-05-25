@@ -1,4 +1,4 @@
-package com.in28minutes.springboot.service;
+package com.j4sysiak.springboot.service;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
@@ -6,10 +6,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.j4sysiak.springboot.model.Course;
+import com.j4sysiak.springboot.model.Student;
 import org.springframework.stereotype.Component;
-
-import com.in28minutes.springboot.model.Course;
-import com.in28minutes.springboot.model.Student;
 
 @Component
 public class StudentService {

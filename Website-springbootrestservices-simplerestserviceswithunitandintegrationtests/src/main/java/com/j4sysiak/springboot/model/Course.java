@@ -1,4 +1,4 @@
-package com.in28minutes.springboot.model;
+package com.j4sysiak.springboot.model;
 
 import java.util.List;
 

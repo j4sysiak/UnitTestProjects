@@ -1,9 +1,10 @@
-package com.in28minutes.springboot.controller;
+package com.j4sysiak.springboot.controller;
 
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 
+import com.j4sysiak.springboot.model.Course;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -21,8 +22,7 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import com.in28minutes.springboot.model.Course;
-import com.in28minutes.springboot.service.StudentService;
+import com.j4sysiak.springboot.service.StudentService;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(value = StudentController.class, secure = false)

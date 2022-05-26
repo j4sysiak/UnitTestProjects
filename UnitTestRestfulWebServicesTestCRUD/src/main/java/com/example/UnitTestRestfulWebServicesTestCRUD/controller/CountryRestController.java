@@ -27,7 +27,7 @@ public class CountryRestController {
     }
 
     @GetMapping("/countries/delete/{id}")
-    public void delete(@PathVariable("id") Integer id) {
+    public void delete(@PathVariable("id") Long id) {
         System.out.println("Country ID: " + id);
         countryRepository.deleteById(id);
     }

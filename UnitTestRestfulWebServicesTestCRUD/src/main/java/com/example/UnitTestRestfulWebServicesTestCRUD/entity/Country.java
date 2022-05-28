@@ -1,9 +1,9 @@
-package com.example.UnitTestRestfulWebServicesTestCRUD.model;
+package com.example.UnitTestRestfulWebServicesTestCRUD.entity;
 
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.Set;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "tbl_countries")
@@ -19,9 +19,10 @@ public class Country {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     @Column(length = 64)
     private String name;
 
-    @OneToMany(mappedBy = "country")  //One Country to Many States
-    private Set<State> states;
+//    @OneToMany(mappedBy = "country")  //One Country to Many States
+//    private Set<State> states;
 }

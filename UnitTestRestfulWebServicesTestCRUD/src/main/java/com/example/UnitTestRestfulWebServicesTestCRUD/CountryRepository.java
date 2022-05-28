@@ -1,12 +1,16 @@
 package com.example.UnitTestRestfulWebServicesTestCRUD;
 
-import com.example.UnitTestRestfulWebServicesTestCRUD.model.Country;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.example.UnitTestRestfulWebServicesTestCRUD.entity.Country;
+import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface CountryRepository extends JpaRepository<Country, Long> {
-    List<Country> findAllByOrderByNameAsc();
+public interface CountryRepository extends CrudRepository<Country, Long> {
 
-    void deleteById(Integer id);
+   //void deleteById(Integer id);
+
+    @Override
+    Country save(Country entity);
+
+    List<Country> findAllByOrderByNameAsc();
 }

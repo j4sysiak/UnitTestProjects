@@ -1,8 +1,9 @@
-package com.example.UnitTestRestfulWebServicesTestCRUD.model;
+package com.example.UnitTestRestfulWebServicesTestCRUD.entity;
 
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "tbl_states")
@@ -18,10 +19,11 @@ public class State {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     @Column(length = 64)
     private String name;
 
-    @ManyToOne    // Many States toOne Country
-    @JoinColumn(name = "country_id")
-    private Country country;
+//    @ManyToOne    // Many States toOne Country
+//    @JoinColumn(name = "country_id")
+//    private Country country;
 }

@@ -1,7 +1,7 @@
 package com.example.UnitTestRestfulWebServicesTestCRUD.controller;
 
 import com.example.UnitTestRestfulWebServicesTestCRUD.CountryRepository;
-import com.example.UnitTestRestfulWebServicesTestCRUD.model.Country;
+import com.example.UnitTestRestfulWebServicesTestCRUD.entity.Country;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +22,7 @@ public class CountryRestController {
     @PostMapping("/countries/save")
     public String save(@RequestBody Country country) {
         System.out.println("ID: " + country.getId() + " Name: " + country.getName());
-        Country savedCountry = (Country) countryRepository.save(country);
+        Country savedCountry = countryRepository.save(country);
         return String.valueOf(savedCountry.getId());
     }
 

@@ -35,6 +35,7 @@ public class UserControllerTest {
     public void saveUserTest() throws Exception {
 
         User user = User.builder()
+                .id(1)
                 .name("John")
                 .build();
 

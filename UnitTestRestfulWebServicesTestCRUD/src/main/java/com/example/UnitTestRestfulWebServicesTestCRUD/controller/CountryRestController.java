@@ -1,6 +1,6 @@
 package com.example.UnitTestRestfulWebServicesTestCRUD.controller;
 
-import com.example.UnitTestRestfulWebServicesTestCRUD.CountryRepository;
+import com.example.UnitTestRestfulWebServicesTestCRUD.repository.CountryRepository;
 import com.example.UnitTestRestfulWebServicesTestCRUD.entity.Country;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -27,7 +27,7 @@ public class CountryRestController {
     }
 
     @GetMapping("/countries/delete/{id}")
-    public void delete(@PathVariable("id") Long id) {
+    public void delete(@PathVariable("id") Integer id) {
         System.out.println("Country ID: " + id);
         countryRepository.deleteById(id);
     }

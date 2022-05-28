@@ -17,7 +17,7 @@ public class State {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @NotBlank
     @Column(length = 64)

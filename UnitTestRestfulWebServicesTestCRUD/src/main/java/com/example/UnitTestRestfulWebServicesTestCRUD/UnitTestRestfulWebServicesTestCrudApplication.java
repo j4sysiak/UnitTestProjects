@@ -9,5 +9,4 @@ public class UnitTestRestfulWebServicesTestCrudApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(UnitTestRestfulWebServicesTestCrudApplication.class, args);
 	}
-
 }

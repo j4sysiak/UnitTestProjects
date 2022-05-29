@@ -1,7 +1,6 @@
 package com.example.UnitTestRestfulWebServicesTestCRUD.controller;
 
 import com.example.UnitTestRestfulWebServicesTestCRUD.entity.Country;
-import com.example.UnitTestRestfulWebServicesTestCRUD.entity.User;
 import com.example.UnitTestRestfulWebServicesTestCRUD.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,8 +19,9 @@ public class CountryRestController {
         return new ResponseEntity<>(countryService.geCountryById(id), HttpStatus.OK);
     }
 
-    @PostMapping("/country")
+    @PostMapping("/country/save")
     public ResponseEntity<Country> saveCountry(@RequestBody Country country) {
+        System.out.println("SaveCountry REST API is invoked ... ");
         return new ResponseEntity<>(countryService.saveCountry(country), HttpStatus.CREATED);
     }
 

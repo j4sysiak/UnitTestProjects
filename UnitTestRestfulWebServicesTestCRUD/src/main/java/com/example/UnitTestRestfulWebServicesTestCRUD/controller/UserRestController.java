@@ -15,11 +15,13 @@ public class UserRestController {
 
     @GetMapping("/user/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Integer id) {
+        System.out.println("GetUserById REST API is invoked ... ");
         return new ResponseEntity<>(userService.getUserById(id), HttpStatus.OK);
     }
 
-    @PostMapping("/user")
+    @PostMapping("/user/save")
     public ResponseEntity<User> saveUser(@RequestBody User user) {
+        System.out.println("SaveUser REST API is invoked ... ");
         return new ResponseEntity<>(userService.saveUser(user), HttpStatus.CREATED);
     }
 }

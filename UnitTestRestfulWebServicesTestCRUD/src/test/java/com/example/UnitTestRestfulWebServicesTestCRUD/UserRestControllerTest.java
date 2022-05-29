@@ -42,8 +42,8 @@ public class UserRestControllerTest {
         when(userService.saveUser(any(User.class))).thenReturn(user);
 
 
-        //mock request "/user"
-        mockMvc.perform(MockMvcRequestBuilders.post("/user")
+        //mock request "/user/save"
+        mockMvc.perform(MockMvcRequestBuilders.post("/user/save")
                 .content(new ObjectMapper().writeValueAsString(user))
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated())
@@ -56,11 +56,13 @@ public class UserRestControllerTest {
 
         //mock the data return by the UserService class
         when(userService.getUserById(anyInt())).thenReturn(User.builder()
+                        .id(12)
                 .name("John")
                 .build());
 
         //create a mock HTTP request to verify the expected result
         mockMvc.perform(MockMvcRequestBuilders.get("/user/12"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(12))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("John"))
                 .andExpect(status().isOk());
 

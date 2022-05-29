@@ -1,15 +1,10 @@
 package com.example.UnitTestRestfulWebServicesTestCRUD;
 
 import com.example.UnitTestRestfulWebServicesTestCRUD.controller.CountryRestController;
-import com.example.UnitTestRestfulWebServicesTestCRUD.controller.UserRestController;
 import com.example.UnitTestRestfulWebServicesTestCRUD.entity.Country;
-import com.example.UnitTestRestfulWebServicesTestCRUD.entity.User;
-import com.example.UnitTestRestfulWebServicesTestCRUD.repository.CountryRepository;
 import com.example.UnitTestRestfulWebServicesTestCRUD.service.CountryService;
-import com.example.UnitTestRestfulWebServicesTestCRUD.service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -17,12 +12,10 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.context.WebApplicationContext;
 
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(CountryRestController.class)
@@ -38,18 +31,41 @@ public class CountryRestControlerTests {
     private CountryService countryService;
 
     @Test
+    public void saveCountryTest() throws Exception {
+
+        Country country = Country.builder()
+                .id(1)
+                .name("Sweden")
+                .build();
+
+        //mock the country data that we have to save
+        when(countryService.saveCountry(any(Country.class))).thenReturn(country);
+
+
+        //mock request "/country/save"
+        mockMvc.perform(MockMvcRequestBuilders.post("/country/save")
+                        .content(new ObjectMapper().writeValueAsString(country))
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isCreated())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.id").exists())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("Sweden"));
+    }
+
+
+    @Test
     public void getCountryByIdTest() throws Exception {
 
         //mock the data returned by the CountryService class
         when(countryService.geCountryById(anyInt())).thenReturn(Country.builder()
+                .id(12)
                 .name("USA")
                 .build());
 
         //create a mock HTTP request to verify the expected result
         mockMvc.perform(MockMvcRequestBuilders.get("/country/12"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(12))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("USA"))
                 .andExpect(status().isOk());
-
     }
 
 //    @Test

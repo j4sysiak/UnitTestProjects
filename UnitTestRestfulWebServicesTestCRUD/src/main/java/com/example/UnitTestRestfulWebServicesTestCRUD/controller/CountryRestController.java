@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class CountryRestController {
 
@@ -32,10 +34,10 @@ public class CountryRestController {
         countryService.deleteById(id);
     }
 
-//    @PostMapping("/countries/save")
-//    public String save(@RequestBody Country country) {
-//        System.out.println("ID: " + country.getId() + " Name: " + country.getName());
-//        Country savedCountry = countryRepository.save(country);
-//        return String.valueOf(savedCountry.getId());
-//    }
+    @GetMapping("/country/list")
+    public ResponseEntity<List<Country>> findAllByOrderByNameAsc() {
+        System.out.println("FindAllByOrderByNameAsc REST API is invoked ... ");
+        return new ResponseEntity<>((List<Country>) countryService.findAllByOrderByNameAsc(), HttpStatus.OK);
+    }
+
 }

@@ -5,6 +5,8 @@ import com.example.UnitTestRestfulWebServicesTestCRUD.repository.CountryReposito
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CountryServiceImpl implements CountryService {
 
@@ -24,5 +26,10 @@ public class CountryServiceImpl implements CountryService {
     @Override
     public void deleteById(Integer id) {
         countryRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Country> findAllByOrderByNameAsc() {
+        return countryRepository.findAllByOrderByNameAsc();
     }
 }

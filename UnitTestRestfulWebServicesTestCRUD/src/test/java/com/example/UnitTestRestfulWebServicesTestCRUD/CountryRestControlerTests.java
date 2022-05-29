@@ -5,6 +5,7 @@ import com.example.UnitTestRestfulWebServicesTestCRUD.entity.Country;
 import com.example.UnitTestRestfulWebServicesTestCRUD.entity.User;
 import com.example.UnitTestRestfulWebServicesTestCRUD.service.CountryService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +13,12 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
@@ -89,10 +94,6 @@ public class CountryRestControlerTests {
                 .andExpect(status().isOk());
     }
 
-
-
-
-/*
     @Test
     public void testListOfCountries() throws Exception {
         List<Country> listOfCountries = new ArrayList();
@@ -101,13 +102,17 @@ public class CountryRestControlerTests {
         listOfCountries.add(Country.builder().id(3).name("Germany").build());
         listOfCountries.add(Country.builder().id(4).name("India").build());
 
-        Mockito.when(countryRepository.findAllByOrderByNameAsc()).thenReturn(listOfCountries);
+        when(countryService.findAllByOrderByNameAsc()).thenReturn(listOfCountries);
 
-        String url = "/countries/list";
-        MvcResult mvcResult = mockMvc.perform(get(url)).andExpect(status().isOk()).andReturn();
+        String url = "/country/list";
+        mockMvc.perform(MockMvcRequestBuilders.get(url))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.size()", Matchers.is(4)))
+                .andExpect(MockMvcResultMatchers.jsonPath("$[0].name").value("Poland"))
+                .andReturn();
 
-        String actualJsonResponse = mvcResult.getResponse().getContentAsString();
-        System.out.println(actualJsonResponse);
+      //  String actualJsonResponse = mvcResult.getResponse().getContentAsString();
+       // System.out.println(actualJsonResponse);
 
         // w logach mamy:
         //listOfCountries REST API is invoked ...
@@ -120,8 +125,7 @@ public class CountryRestControlerTests {
 //    ]
 
 
-        String expectedJsonResponse = objectMapper.writeValueAsString(listOfCountries);
-        assertThat(actualJsonResponse).isEqualToIgnoringCase(expectedJsonResponse);
+     //   String expectedJsonResponse = objectMapper.writeValueAsString(listOfCountries);
+     //   assertThat(actualJsonResponse).isEqualToIgnoringCase(expectedJsonResponse);
     }
- */
 }

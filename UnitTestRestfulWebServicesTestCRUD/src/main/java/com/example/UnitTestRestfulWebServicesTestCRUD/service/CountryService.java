@@ -10,4 +10,6 @@ public interface CountryService {
     Country saveCountry(Country country);
 
     void deleteById(Integer id);
+
+    Object findAllByOrderByNameAsc();
 }

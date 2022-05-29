@@ -1,8 +1,7 @@
 package com.example.UnitTestRestfulWebServicesTestCRUD;
 
-import com.example.UnitTestRestfulWebServicesTestCRUD.controller.UserController;
+import com.example.UnitTestRestfulWebServicesTestCRUD.controller.UserRestController;
 import com.example.UnitTestRestfulWebServicesTestCRUD.entity.User;
-import com.example.UnitTestRestfulWebServicesTestCRUD.repository.UserRepository;
 import com.example.UnitTestRestfulWebServicesTestCRUD.service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
@@ -19,11 +18,11 @@ import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(UserController.class)
-public class UserControllerTest {
+@WebMvcTest(UserRestController.class)
+public class UserRestControllerTest {
 
     @Autowired
-    private UserController userController;
+    private UserRestController userRestController;
 
     @Autowired
     private MockMvc mockMvc;

@@ -4,7 +4,7 @@ import com.example.UnitTestRestfulWebServicesTestCRUD.entity.User;
 
 public interface UserService {
 
-    public User getUserById(Integer id);
+    User getUserById(Integer id);
 
-    public User saveUser(User user);
+    User saveUser(User user);
 }

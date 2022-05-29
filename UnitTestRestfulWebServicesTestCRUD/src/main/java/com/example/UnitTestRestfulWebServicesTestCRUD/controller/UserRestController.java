@@ -1,7 +1,6 @@
 package com.example.UnitTestRestfulWebServicesTestCRUD.controller;
 
 import com.example.UnitTestRestfulWebServicesTestCRUD.entity.User;
-import com.example.UnitTestRestfulWebServicesTestCRUD.repository.UserRepository;
 import com.example.UnitTestRestfulWebServicesTestCRUD.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class UserController {
+public class UserRestController {
 
     @Autowired
     private UserService userService;

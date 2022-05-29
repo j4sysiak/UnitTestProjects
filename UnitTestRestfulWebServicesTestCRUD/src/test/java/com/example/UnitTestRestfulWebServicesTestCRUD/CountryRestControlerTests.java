@@ -2,9 +2,11 @@ package com.example.UnitTestRestfulWebServicesTestCRUD;
 
 import com.example.UnitTestRestfulWebServicesTestCRUD.controller.CountryRestController;
 import com.example.UnitTestRestfulWebServicesTestCRUD.entity.Country;
+import com.example.UnitTestRestfulWebServicesTestCRUD.entity.User;
 import com.example.UnitTestRestfulWebServicesTestCRUD.service.CountryService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -16,6 +18,8 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
+import static org.springframework.http.RequestEntity.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(CountryRestController.class)
@@ -31,8 +35,25 @@ public class CountryRestControlerTests {
     private CountryService countryService;
 
     @Test
-    public void saveCountryTest() throws Exception {
+    public void saveCountryTest_v1() throws Exception {
+        Country newCountry = Country.builder()
+                .id(1)
+                .name("Canada")
+                .build();
 
+        when(countryService.saveCountry(any(Country.class))).thenReturn(newCountry);
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/country/save")
+                .content(new ObjectMapper().writeValueAsString(newCountry))
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isCreated())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.id").exists())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(1))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("Canada"));
+    }
+
+    @Test
+    public void saveCountryTest_v2() throws Exception {
         Country country = Country.builder()
                 .id(1)
                 .name("Sweden")
@@ -68,26 +89,9 @@ public class CountryRestControlerTests {
                 .andExpect(status().isOk());
     }
 
-//    @Test
-//    public void testCreateNewCountry() throws Exception {
-//
-//        Country newCountry = Country.builder()
-//                //.id(100)
-//                .name("Canada")
-//                .build();
-//
-//        Country savedCountry = Country.builder()
-//                .id(1)
-//                .name("Canada")
-//                .build();
-//
-//        Mockito.when(countryRepository.save(newCountry)).thenReturn(savedCountry);
-//
-//        this.mockMvc.perform(post("/countries/save")
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .content("test")
-//        ).andExpect(status().isOk());
-//    }
+
+
+
 /*
     @Test
     public void testListOfCountries() throws Exception {

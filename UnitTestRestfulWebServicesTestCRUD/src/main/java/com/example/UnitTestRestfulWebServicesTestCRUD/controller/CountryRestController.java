@@ -22,6 +22,7 @@ public class CountryRestController {
     @PostMapping("/country/save")
     public ResponseEntity<Country> saveCountry(@RequestBody Country country) {
         System.out.println("SaveCountry REST API is invoked ... ");
+        Country savedCountry = countryService.saveCountry(country);
         return new ResponseEntity<>(countryService.saveCountry(country), HttpStatus.CREATED);
     }
 

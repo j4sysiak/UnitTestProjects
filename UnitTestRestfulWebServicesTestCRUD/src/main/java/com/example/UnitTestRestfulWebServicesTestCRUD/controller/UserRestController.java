@@ -1,5 +1,6 @@
 package com.example.UnitTestRestfulWebServicesTestCRUD.controller;
 
+import com.example.UnitTestRestfulWebServicesTestCRUD.entity.Country;
 import com.example.UnitTestRestfulWebServicesTestCRUD.entity.User;
 import com.example.UnitTestRestfulWebServicesTestCRUD.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,7 @@ public class UserRestController {
     @PostMapping("/user/save")
     public ResponseEntity<User> saveUser(@RequestBody User user) {
         System.out.println("SaveUser REST API is invoked ... ");
+        User savedUser = userService.saveUser(user);
         return new ResponseEntity<>(userService.saveUser(user), HttpStatus.CREATED);
     }
 }

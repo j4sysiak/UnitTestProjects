@@ -32,22 +32,22 @@ public class UserRestControllerTest {
 
     @Test
     public void saveUserTest() throws Exception {
-
-        User user = User.builder()
+        User newUser = User.builder()
                 .id(1)
                 .name("John")
                 .build();
 
         //mock the user data that we have to save
-        when(userService.saveUser(any(User.class))).thenReturn(user);
+        when(userService.saveUser(any(User.class))).thenReturn(newUser);
 
 
         //mock request "/user/save"
         mockMvc.perform(MockMvcRequestBuilders.post("/user/save")
-                .content(new ObjectMapper().writeValueAsString(user))
+                .content(new ObjectMapper().writeValueAsString(newUser))
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.id").exists())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(1))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("John"));
     }
 

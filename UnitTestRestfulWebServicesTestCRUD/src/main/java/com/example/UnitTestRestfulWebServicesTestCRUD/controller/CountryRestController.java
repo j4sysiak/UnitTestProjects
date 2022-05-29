@@ -1,16 +1,12 @@
 package com.example.UnitTestRestfulWebServicesTestCRUD.controller;
 
-import com.example.UnitTestRestfulWebServicesTestCRUD.entity.User;
-import com.example.UnitTestRestfulWebServicesTestCRUD.repository.CountryRepository;
 import com.example.UnitTestRestfulWebServicesTestCRUD.entity.Country;
+import com.example.UnitTestRestfulWebServicesTestCRUD.entity.User;
 import com.example.UnitTestRestfulWebServicesTestCRUD.service.CountryService;
-import com.example.UnitTestRestfulWebServicesTestCRUD.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 public class CountryRestController {
@@ -18,16 +14,17 @@ public class CountryRestController {
     @Autowired
     private CountryService countryService;
 
-    @GetMapping("/user/{id}")
-    public ResponseEntity<User> getCountryById(@PathVariable Integer id) {
+    @GetMapping("/country/{id}")
+    public ResponseEntity<Country> getCountryById(@PathVariable Integer id) {
         System.out.println("CountryById REST API is invoked ... ");
-        return new ResponseEntity<>(countryService.getUserById(id), HttpStatus.OK);
+        return new ResponseEntity<>(countryService.geCountryById(id), HttpStatus.OK);
     }
 
-//    @GetMapping("/user/{id}")
-//    public ResponseEntity<User> getUserById(@PathVariable Integer id) {
-//        return new ResponseEntity<>(userService.getUserById(id), HttpStatus.OK);
-//    }
+    @PostMapping("/country")
+    public ResponseEntity<Country> saveCountry(@RequestBody Country country) {
+        return new ResponseEntity<>(countryService.saveCountry(country), HttpStatus.CREATED);
+    }
+
 
 //    @PostMapping("/countries/save")
 //    public String save(@RequestBody Country country) {

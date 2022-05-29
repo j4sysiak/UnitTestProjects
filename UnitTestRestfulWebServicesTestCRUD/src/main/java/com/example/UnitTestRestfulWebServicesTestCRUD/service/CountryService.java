@@ -6,4 +6,6 @@ import com.example.UnitTestRestfulWebServicesTestCRUD.entity.User;
 public interface CountryService {
 
     Country geCountryById(Integer id);
+
+    Country saveCountry(Country country);
 }

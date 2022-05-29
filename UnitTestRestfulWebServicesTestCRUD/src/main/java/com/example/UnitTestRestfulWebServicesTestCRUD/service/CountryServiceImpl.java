@@ -12,7 +12,12 @@ public class CountryServiceImpl implements CountryService {
     private CountryRepository countryRepository;
 
     @Override
-    public Country getCountryById(Integer id) {
+    public Country geCountryById(Integer id) {
         return countryRepository.findById(id).get();
+    }
+
+    @Override
+    public Country saveCountry(Country country) {
+        return countryRepository.save(country);
     }
 }

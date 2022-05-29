@@ -8,4 +8,6 @@ public interface CountryService {
     Country geCountryById(Integer id);
 
     Country saveCountry(Country country);
+
+    void deleteById(Integer id);
 }

@@ -26,6 +26,11 @@ public class CountryRestController {
         return new ResponseEntity<>(countryService.saveCountry(country), HttpStatus.CREATED);
     }
 
+    @GetMapping("/country/delete/{id}")
+    public void deleteCountry(@PathVariable("id") Integer id) {
+        System.out.println("DeleteCountry REST API is invoked ... ");
+        countryService.deleteById(id);
+    }
 
 //    @PostMapping("/countries/save")
 //    public String save(@RequestBody Country country) {
@@ -33,11 +38,4 @@ public class CountryRestController {
 //        Country savedCountry = countryRepository.save(country);
 //        return String.valueOf(savedCountry.getId());
 //    }
-//
-//    @GetMapping("/countries/delete/{id}")
-//    public void delete(@PathVariable("id") Integer id) {
-//        System.out.println("Country ID: " + id);
-//        countryRepository.deleteById(id);
-//    }
-
 }

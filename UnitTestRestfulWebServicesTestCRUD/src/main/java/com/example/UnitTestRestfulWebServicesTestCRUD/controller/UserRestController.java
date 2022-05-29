@@ -26,4 +26,10 @@ public class UserRestController {
         User savedUser = userService.saveUser(user);
         return new ResponseEntity<>(userService.saveUser(user), HttpStatus.CREATED);
     }
+
+    @GetMapping("/user/delete/{id}")
+    public void deleteUser(@PathVariable("id") Integer id) {
+        System.out.println("DeleteUser REST API is invoked ... ");
+        userService.deleteById(id);
+    }
 }

@@ -20,4 +20,9 @@ public class CountryServiceImpl implements CountryService {
     public Country saveCountry(Country country) {
         return countryRepository.save(country);
     }
+
+    @Override
+    public void deleteById(Integer id) {
+        countryRepository.deleteById(id);
+    }
 }

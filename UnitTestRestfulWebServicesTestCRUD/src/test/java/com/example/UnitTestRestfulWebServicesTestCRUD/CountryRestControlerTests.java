@@ -1,8 +1,12 @@
 package com.example.UnitTestRestfulWebServicesTestCRUD;
 
 import com.example.UnitTestRestfulWebServicesTestCRUD.controller.CountryRestController;
+import com.example.UnitTestRestfulWebServicesTestCRUD.controller.UserRestController;
 import com.example.UnitTestRestfulWebServicesTestCRUD.entity.Country;
+import com.example.UnitTestRestfulWebServicesTestCRUD.entity.User;
 import com.example.UnitTestRestfulWebServicesTestCRUD.repository.CountryRepository;
+import com.example.UnitTestRestfulWebServicesTestCRUD.service.CountryService;
+import com.example.UnitTestRestfulWebServicesTestCRUD.service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -11,8 +15,13 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.WebApplicationContext;
 
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -20,38 +29,49 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class CountryRestControlerTests {
 
     @Autowired
-    protected ObjectMapper objectMapper;
+    private CountryRestController countryRestController;
 
     @Autowired
     private MockMvc mockMvc;
 
-    @Autowired
-    private WebApplicationContext webApplicationContext;
-
-
     @MockBean
-    private CountryRepository countryRepository;
+    private CountryService countryService;
 
-    //@Test
-    public void testCreateNewCountry() throws Exception {
+    @Test
+    public void getCountryByIdTest() throws Exception {
 
-        Country newCountry = Country.builder()
-                //.id(100)
-                .name("Canada")
-                .build();
+        //mock the data returned by the CountryService class
+        when(countryService.geCountryById(anyInt())).thenReturn(Country.builder()
+                .name("USA")
+                .build());
 
-        Country savedCountry = Country.builder()
-                .id(1)
-                .name("Canada")
-                .build();
+        //create a mock HTTP request to verify the expected result
+        mockMvc.perform(MockMvcRequestBuilders.get("/country/12"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("USA"))
+                .andExpect(status().isOk());
 
-        Mockito.when(countryRepository.save(newCountry)).thenReturn(savedCountry);
-
-        this.mockMvc.perform(post("/countries/save")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content("test")
-        ).andExpect(status().isOk());
     }
+
+//    @Test
+//    public void testCreateNewCountry() throws Exception {
+//
+//        Country newCountry = Country.builder()
+//                //.id(100)
+//                .name("Canada")
+//                .build();
+//
+//        Country savedCountry = Country.builder()
+//                .id(1)
+//                .name("Canada")
+//                .build();
+//
+//        Mockito.when(countryRepository.save(newCountry)).thenReturn(savedCountry);
+//
+//        this.mockMvc.perform(post("/countries/save")
+//                .contentType(MediaType.APPLICATION_JSON)
+//                .content("test")
+//        ).andExpect(status().isOk());
+//    }
 /*
     @Test
     public void testListOfCountries() throws Exception {

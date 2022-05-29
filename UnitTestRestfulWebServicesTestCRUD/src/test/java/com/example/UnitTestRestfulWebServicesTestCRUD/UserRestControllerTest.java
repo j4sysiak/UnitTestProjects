@@ -54,7 +54,7 @@ public class UserRestControllerTest {
     @Test
     public void getUserByIdTest() throws Exception {
 
-        //mock the data return by the user service class
+        //mock the data return by the UserService class
         when(userService.getUserById(anyInt())).thenReturn(User.builder()
                 .name("John")
                 .build());

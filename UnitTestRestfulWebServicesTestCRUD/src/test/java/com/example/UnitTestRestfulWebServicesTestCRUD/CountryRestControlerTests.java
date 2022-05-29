@@ -2,14 +2,11 @@ package com.example.UnitTestRestfulWebServicesTestCRUD;
 
 import com.example.UnitTestRestfulWebServicesTestCRUD.controller.CountryRestController;
 import com.example.UnitTestRestfulWebServicesTestCRUD.entity.Country;
-import com.example.UnitTestRestfulWebServicesTestCRUD.entity.User;
-import com.example.UnitTestRestfulWebServicesTestCRUD.repository.CountryRepository;
 import com.example.UnitTestRestfulWebServicesTestCRUD.service.CountryService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -26,9 +23,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.*;
-import static org.springframework.http.RequestEntity.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(CountryRestController.class)
@@ -70,8 +65,8 @@ public class CountryRestControlerTests {
         when(countryService.saveCountry(any(Country.class))).thenReturn(newCountry);
 
         mockMvc.perform(MockMvcRequestBuilders.post("/country/save")
-                .content(new ObjectMapper().writeValueAsString(newCountry))
-                .contentType(MediaType.APPLICATION_JSON))
+                        .content(new ObjectMapper().writeValueAsString(newCountry))
+                        .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.id").exists())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(1))

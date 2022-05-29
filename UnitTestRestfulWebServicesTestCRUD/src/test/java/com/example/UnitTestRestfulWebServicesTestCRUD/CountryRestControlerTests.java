@@ -4,6 +4,7 @@ import com.example.UnitTestRestfulWebServicesTestCRUD.controller.CountryRestCont
 import com.example.UnitTestRestfulWebServicesTestCRUD.entity.Country;
 import com.example.UnitTestRestfulWebServicesTestCRUD.entity.User;
 import com.example.UnitTestRestfulWebServicesTestCRUD.service.CountryService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
@@ -20,10 +21,12 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
 import static org.springframework.http.RequestEntity.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -38,6 +41,9 @@ public class CountryRestControlerTests {
 
     @MockBean
     private CountryService countryService;
+
+    @Autowired
+    private ObjectMapper objectMapper;
 
     @Test
     public void saveCountryTest_v1() throws Exception {
@@ -95,7 +101,7 @@ public class CountryRestControlerTests {
     }
 
     @Test
-    public void testListOfCountries() throws Exception {
+    public void testListOfCountries() throws JsonProcessingException, Exception {
         List<Country> listOfCountries = new ArrayList();
         listOfCountries.add(Country.builder().id(1).name("Poland").build());
         listOfCountries.add(Country.builder().id(2).name("USA").build());
@@ -111,11 +117,16 @@ public class CountryRestControlerTests {
                 .andExpect(MockMvcResultMatchers.jsonPath("$[0].name").value("Poland"))
                 .andReturn();
 
-      //  String actualJsonResponse = mvcResult.getResponse().getContentAsString();
-       // System.out.println(actualJsonResponse);
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get(url))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andDo(print())
+                .andReturn();
+
+        String actualJsonResponse = mvcResult.getResponse().getContentAsString();
+        System.out.println("actualJsonResponse: " + actualJsonResponse);
 
         // w logach mamy:
-        //listOfCountries REST API is invoked ...
+        // CountryById REST API is invoked ...
 
 //    [
 //        {"id":1,"name":"Poland","states":null},
@@ -125,7 +136,8 @@ public class CountryRestControlerTests {
 //    ]
 
 
-     //   String expectedJsonResponse = objectMapper.writeValueAsString(listOfCountries);
-     //   assertThat(actualJsonResponse).isEqualToIgnoringCase(expectedJsonResponse);
+        String expectedJsonResponse = objectMapper.writeValueAsString(listOfCountries);
+        System.out.println("expectedJsonResponse: " + expectedJsonResponse);
+        assertThat(actualJsonResponse).isEqualToIgnoringCase(expectedJsonResponse);
     }
 }

@@ -3,6 +3,7 @@ package com.example.UnitTestRestfulWebServicesTestCRUD;
 import com.example.UnitTestRestfulWebServicesTestCRUD.controller.CountryRestController;
 import com.example.UnitTestRestfulWebServicesTestCRUD.entity.Country;
 import com.example.UnitTestRestfulWebServicesTestCRUD.entity.User;
+import com.example.UnitTestRestfulWebServicesTestCRUD.repository.CountryRepository;
 import com.example.UnitTestRestfulWebServicesTestCRUD.service.CountryService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -24,7 +25,7 @@ import java.util.List;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 import static org.springframework.http.RequestEntity.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -44,6 +45,20 @@ public class CountryRestControlerTests {
 
     @Autowired
     private ObjectMapper objectMapper;
+
+    @Test
+    public void tesNameOfCountrtMustNotBeBlank() throws JsonProcessingException, Exception {
+
+        Country country = Country.builder().id(2).name("").build();
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/country/save")
+                        .content(new ObjectMapper().writeValueAsString(country))
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest());
+
+        verify(countryService, times(0)).saveCountry(country);
+        when(countryService.saveCountry(any(Country.class))).thenReturn(country);
+    }
 
     @Test
     public void saveCountryTest_v1() throws Exception {
@@ -140,4 +155,6 @@ public class CountryRestControlerTests {
         System.out.println("expectedJsonResponse: " + expectedJsonResponse);
         assertThat(actualJsonResponse).isEqualToIgnoringCase(expectedJsonResponse);
     }
+
+
 }

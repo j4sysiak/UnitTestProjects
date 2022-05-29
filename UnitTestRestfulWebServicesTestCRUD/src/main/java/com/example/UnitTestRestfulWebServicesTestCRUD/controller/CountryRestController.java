@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -22,7 +23,7 @@ public class CountryRestController {
     }
 
     @PostMapping("/country/save")
-    public ResponseEntity<Country> saveCountry(@RequestBody Country country) {
+    public ResponseEntity<Country> saveCountry(@Valid @RequestBody Country country) {
         System.out.println("SaveCountry REST API is invoked ... ");
         Country savedCountry = countryService.saveCountry(country);
         return new ResponseEntity<>(countryService.saveCountry(country), HttpStatus.CREATED);

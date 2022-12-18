@@ -29,6 +29,13 @@ public class CountryRestController {
         return new ResponseEntity<>(countryService.saveCountry(country), HttpStatus.CREATED);
     }
 
+    @PostMapping("/country/save2")
+    public ResponseEntity<String> save(@RequestBody Country country) {
+        System.out.println("Save (Country) REST API is invoked ... ");
+        String savedCountry = countryService.save(country);
+        return new ResponseEntity<>(countryService.save(country), HttpStatus.CREATED);
+    }
+
     @GetMapping("/country/delete/{id}")
     public void deleteCountry(@PathVariable("id") Integer id) {
         System.out.println("DeleteCountry REST API is invoked ... ");

@@ -24,6 +24,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(CountryRestController.class)
@@ -42,21 +43,22 @@ public class CountryRestControlerTests {
     private ObjectMapper objectMapper;
 
     @Test
-    public void tesNameOfCountrtMustNotBeBlank() throws JsonProcessingException, Exception {
+    public void testNameOfCountryMustNotBeBlank() throws JsonProcessingException, Exception {
 
         Country country = Country.builder().id(2).name("").build();
 
         mockMvc.perform(MockMvcRequestBuilders.post("/country/save")
                         .content(new ObjectMapper().writeValueAsString(country))
                         .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isBadRequest());
+                .andExpect(status().isBadRequest())
+                .andDo(print());
 
         verify(countryService, times(0)).saveCountry(country);
         when(countryService.saveCountry(any(Country.class))).thenReturn(country);
     }
 
     @Test
-    public void saveCountryTest_v1() throws Exception {
+    public void saveCountryTest() throws Exception {
         Country newCountry = Country.builder()
                 .id(1)
                 .name("Canada")
@@ -70,27 +72,61 @@ public class CountryRestControlerTests {
                 .andExpect(status().isCreated())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.id").exists())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(1))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("Canada"));
+                .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("Canada"))
+                .andDo(print());
     }
 
     @Test
     public void saveCountryTest_v2() throws Exception {
-        Country country = Country.builder()
+        Country newCountry = Country.builder()
                 .id(1)
-                .name("Sweden")
+                .name("Canada")
+                .build();
+
+        Country savedCountry = Country.builder()
+                .id(1)
+                .name("Canada")
                 .build();
 
         //mock the country data that we have to save
-        when(countryService.saveCountry(any(Country.class))).thenReturn(country);
+        when(countryService.saveCountry(newCountry)).thenReturn(savedCountry);
 
 
         //mock request "/country/save"
         mockMvc.perform(MockMvcRequestBuilders.post("/country/save")
-                        .content(new ObjectMapper().writeValueAsString(country))
+                        .content(new ObjectMapper().writeValueAsString(newCountry))
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.id").exists())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("Sweden"));
+                //.andExpect(MockMvcResultMatchers.jsonPath("$.id").exists())
+                //.andExpect(MockMvcResultMatchers.jsonPath("$.name").value("Canada"))
+                .andDo(print());
+    }
+
+    //@Test
+    public void saveCountryTest_v3() throws Exception {
+        Country newCountry = Country.builder()
+                .id(1)
+                .name("Canada")
+                .build();
+
+        Country savedCountry = Country.builder()
+                .id(1)
+                .name("Canada")
+                .build();
+
+        //mock the country data that we have to save
+        when(countryService.saveCountry(newCountry)).thenReturn(savedCountry);
+
+
+        //mock request "/country/save"
+        mockMvc.perform(MockMvcRequestBuilders.post("/country/save2")
+                        .content(new ObjectMapper().writeValueAsString(newCountry))
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isCreated())
+                .andExpect(content().string("1"))
+                //.andExpect(MockMvcResultMatchers.jsonPath("$.id").exists())
+                //.andExpect(MockMvcResultMatchers.jsonPath("$.name").value("Canada"))
+                .andDo(print());
     }
 
 
@@ -125,6 +161,7 @@ public class CountryRestControlerTests {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.size()", Matchers.is(4)))
                 .andExpect(MockMvcResultMatchers.jsonPath("$[0].name").value("Poland"))
+                .andDo(print())
                 .andReturn();
 
         MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get(url))
@@ -150,6 +187,4 @@ public class CountryRestControlerTests {
         System.out.println("expectedJsonResponse: " + expectedJsonResponse);
         assertThat(actualJsonResponse).isEqualToIgnoringCase(expectedJsonResponse);
     }
-
-
 }

@@ -1,5 +1,6 @@
 package com.example.demo.student;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -12,8 +13,13 @@ class StudentRepositoryTest {
     @Autowired
     private StudentRepository underTest;
 
+    @AfterEach
+    void tearDown() {
+        underTest.deleteAll();
+    }
+
     @Test
-    void itShouldCheckIfStudentEmailExists() {
+    void itShouldCheckWhenStudentEmailExists() {
 
         //given
         String mail = "jacek@wp.pl";
@@ -32,16 +38,16 @@ class StudentRepositoryTest {
     }
 
     @Test
-    void itShouldCheckIfStudentDoesNotEmailExists() {
+    void itShouldCheckWhenStudentDoesNotEmailExists() {
 
         //given
         String mail = "jacek@wp.pl";
 
         //when
-        boolean expected = underTest.selectExistsEmail("jacek@wp.pl");
+        boolean expected = underTest.selectExistsEmail(mail);
 
         //then
-        assertThat(expected).isTrue();
+        assertThat(expected).isFalse();
     }
 }
 

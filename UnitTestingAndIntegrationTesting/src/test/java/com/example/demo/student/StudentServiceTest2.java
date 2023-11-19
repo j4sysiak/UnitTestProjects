@@ -39,8 +39,6 @@ class StudentServiceTest2 {
 
         //then
         verify(studentRepository).findAll();
-
-
     }
 }
 

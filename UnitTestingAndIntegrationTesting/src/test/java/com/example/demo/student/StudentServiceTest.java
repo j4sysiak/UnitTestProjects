@@ -11,7 +11,10 @@ import org.mockito.MockitoAnnotations;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
 class StudentServiceTest {
@@ -85,22 +88,20 @@ class StudentServiceTest {
                 Gender.FEMALE
         );
 
-        given(studentRepository.selectExistsEmail(student.getEmail()))
+        given(studentRepository.selectExistsEmail(anyString()))
                 .willReturn(true);
 
         //when & then
         assertThatThrownBy( () -> underTest.addStudent(student) )
                 .isInstanceOf(BadRequestException.class)
                 .hasMessageContaining("Email " + student.getEmail() + " taken");
+
+        verify(studentRepository, never()).save(any());
     }
 
     @Test
     @Disabled
     void deleteStudent() {
-
-        //https://www.youtube.com/watch?v=Geq60OVyBPg   1h 01' 01''
-
-
     }
 }
 

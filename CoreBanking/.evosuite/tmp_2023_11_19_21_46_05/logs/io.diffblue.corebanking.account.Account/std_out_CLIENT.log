@@ -1,0 +1,86 @@
+* Starting client
+* Connecting to master process on port 3927
+* Analyzing classpath: 
+  - C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\CoreBanking\target\test-classes
+  - C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\CoreBanking\target\classes
+  - C:\Users\Jacek\.m2\repository\org\mockito\mockito-core\4.7.0\mockito-core-4.7.0.jar
+  - C:\Users\Jacek\.m2\repository\net\bytebuddy\byte-buddy\1.12.13\byte-buddy-1.12.13.jar
+  - C:\Users\Jacek\.m2\repository\net\bytebuddy\byte-buddy-agent\1.12.13\byte-buddy-agent-1.12.13.jar
+  - C:\Users\Jacek\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar
+  - C:\Users\Jacek\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar
+  - C:\Users\Jacek\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar
+  - C:\Users\Jacek\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar
+  - C:\Users\Jacek\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar
+  - C:\Users\Jacek\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar
+  - C:\Users\Jacek\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar
+  - C:\Users\Jacek\.m2\repository\org\jacoco\org.jacoco.agent\0.8.2\org.jacoco.agent-0.8.2-runtime.jar
+  - C:\Users\Jacek\.m2\repository\org\projectlombok\lombok\1.18.28\lombok-1.18.28.jar
+* Finished analyzing classpath
+* Generating tests for class io.diffblue.corebanking.account.Account
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Setting up search algorithm for whole suite generation
+[MASTER] 21:46:15.735 [pool-2-thread-1] WARN  TestSuiteSerialization - Cannot load tests because file does not exist: C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\CoreBanking\.evosuite\evosuite-seeds\io.diffblue.corebanking.account.Account.seed
+* Loaded 0 tests from C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\CoreBanking\.evosuite\evosuite-seeds\io.diffblue.corebanking.account.Account.seed
+* Total number of test goals: 
+  - Line 63
+  - Branch 35
+  - Exception 0
+  - MutationFactory 80
+  - Output 20
+  - Method 17
+  - MethodNoException 17
+  - CBranchFitnessFactory 35
+* Using seed 1700426769685
+* Starting evolution
+* Search finished after 97s and 672 generations, 209822 statements, best individual has fitness: 4.642857142857142
+* Writing sequences to pool
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 100%
+* Total number of goals: 63
+* Number of covered goals: 63
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 100%
+* Total number of goals: 35
+* Number of covered goals: 35
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 6
+* Number of covered goals: 6
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 99%
+* Total number of goals: 80
+* Number of covered goals: 79
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 80%
+* Total number of goals: 20
+* Number of covered goals: 16
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 17
+* Number of covered goals: 17
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 17
+* Number of covered goals: 17
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 100%
+* Total number of goals: 35
+* Number of covered goals: 35
+* Generated 33 tests with total length 142
+* Resulting test suite's coverage: 97% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 75%
+* Compiling and checking tests
+* Writing JUnit test case 'Account_ESTest' to C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\CoreBanking\.evosuite\tmp_2023_11_19_21_46_05\tests
+* Done!
+

@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import io.diffblue.corebanking.branch.Branch;
 import io.diffblue.corebanking.branch.BranchException;
 import io.diffblue.corebanking.client.Client;
-import io.diffblue.corebanking.transaction.Transaction;
 
 import java.util.List;
 

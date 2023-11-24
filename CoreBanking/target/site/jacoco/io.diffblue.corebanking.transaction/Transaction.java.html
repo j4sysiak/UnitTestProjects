@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Transaction.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CoreBanking</a> &gt; <a href="index.source.html" class="el_package">io.diffblue.corebanking.transaction</a> &gt; <span class="el_source">Transaction.java</span></div><h1>Transaction.java</h1><pre class="source lang-java linenums">package io.diffblue.corebanking.transaction;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+/** Transaction class. */
+public abstract class Transaction {
+  private final long transactionAmount;
+  private final Date transactionDate;
+  protected TransactionState transactionState;
+  private long accountBalanceAfterTransaction;
+
+  /**
+   * Transaction constructor.
+   *
+   * @param amount The amount for the transaction.
+   * @param transactionDate The transaction date.
+   */
+<span class="nc" id="L19">  public Transaction(long amount, Date transactionDate) {</span>
+<span class="nc" id="L20">    this.transactionAmount = amount;</span>
+<span class="nc" id="L21">    this.transactionState = TransactionState.NOT_EXECUTED_YET;</span>
+<span class="nc" id="L22">    this.transactionDate = transactionDate;</span>
+<span class="nc" id="L23">  }</span>
+
+  /**
+   * The source of the transaction.
+   *
+   * @return The source.
+   */
+  public abstract String getSource();
+
+  /**
+   * The target of the transastion.
+   *
+   * @return The target.
+   */
+  public abstract String getTarget();
+
+  /**
+   * The amount of the transaction.
+   *
+   * @return The amount of the transaction.
+   */
+  public long getTransactionAmount() {
+<span class="nc" id="L45">    return this.transactionAmount;</span>
+  }
+
+  /**
+   * The transaction date.
+   *
+   * @return The transaction date.
+   */
+  public Date getTransactionDate() {
+<span class="nc" id="L54">    return this.transactionDate;</span>
+  }
+
+  /**
+   * The current state of this transaction.
+   *
+   * @return The current state of this transaction.
+   */
+  public TransactionState getTransactionState() {
+<span class="nc" id="L63">    return this.transactionState;</span>
+  }
+
+  /**
+   * Sets the passed balance as the balance in the target account after the transaction.
+   *
+   * @param accountBalanceAfterTransaction The balance to set.
+   * @throws TransactionException If the transaction was already executed.
+   */
+  protected void setAccountBalanceAfterTransaction(long accountBalanceAfterTransaction)
+      throws TransactionException {
+<span class="nc" id="L74">    this.accountBalanceAfterTransaction = accountBalanceAfterTransaction;</span>
+<span class="nc" id="L75">  }</span>
+
+  /**
+   * Sets the transaction to a failed state.
+   *
+   * @throws TransactionException If the transaction was not in a not-executed state.
+   */
+  public void setCurrentStateFailed() throws TransactionException {
+<span class="nc bnc" id="L83" title="All 2 branches missed.">    if (this.transactionState != TransactionState.NOT_EXECUTED_YET) {</span>
+<span class="nc" id="L84">      throw new TransactionException(</span>
+          &quot;This transaction was already executed, cannot be set to Failed.&quot;);
+    }
+<span class="nc" id="L87">    this.transactionState = TransactionState.FAILED;</span>
+<span class="nc" id="L88">  }</span>
+
+  /**
+   * Executes the transaction.
+   *
+   * @throws TransactionException If executing the transaction fails.
+   */
+  public abstract void executeTransaction() throws TransactionException;
+
+  protected void markTransactionAsExecuted() {
+<span class="nc" id="L98">    this.transactionState = TransactionState.EXECUTED;</span>
+<span class="nc" id="L99">  }</span>
+
+  /**
+   * Returns a string representation of the transaction.
+   *
+   * @return String representation of the transaction.
+   */
+  public String toString() {
+<span class="nc" id="L107">    String output = &quot;Transaction: | &quot;;</span>
+
+<span class="nc" id="L109">    output +=</span>
+<span class="nc" id="L110">        new SimpleDateFormat(&quot;yy.MM.dd&quot;).format(transactionDate)</span>
+            + &quot;\t| &quot;
+            + &quot;Source: &quot;
+<span class="nc" id="L113">            + this.getSource()</span>
+            + &quot;\t| &quot;
+            + &quot;Target: &quot;
+<span class="nc" id="L116">            + this.getTarget()</span>
+            + &quot;\t| &quot;
+            + &quot;Amount: &quot;
+            + this.transactionAmount
+            + &quot;\t| &quot;
+            + &quot;Balance: &quot;
+            + this.accountBalanceAfterTransaction
+            + &quot;\t| &quot;
+            + &quot;Transaction state: &quot;
+<span class="nc" id="L125">            + this.getTransactionState()</span>
+            + &quot;\t|&quot;;
+
+<span class="nc" id="L128">    return output;</span>
+  }
+
+  /** TransactionState Enum. */
+<span class="nc" id="L132">  public enum TransactionState {</span>
+<span class="nc" id="L133">    NOT_EXECUTED_YET,</span>
+<span class="nc" id="L134">    EXECUTED,</span>
+<span class="nc" id="L135">    FAILED</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

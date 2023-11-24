@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Account.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CoreBanking</a> &gt; <a href="index.source.html" class="el_package">io.diffblue.corebanking.account</a> &gt; <span class="el_source">Account.java</span></div><h1>Account.java</h1><pre class="source lang-java linenums">package io.diffblue.corebanking.account;
+
+import io.diffblue.corebanking.branch.Branch;
+import io.diffblue.corebanking.client.Client;
+import io.diffblue.corebanking.transaction.Transaction;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/** Account class. */
+public class Account {
+  public static final int ACCOUNT_NUMBER_LENGTH = 4;
+  private final long accountNumber;
+  private final Client client;
+<span class="fc" id="L15">  private final AccountStatement accountStatement = new AccountStatement();</span>
+  private long currentBalance;
+  private String accountName;
+  private AccountState accountState;
+  private Branch branch;
+
+  /**
+   * The constructor.
+   *
+   * @param accountNumber The account number for the account.
+   * @param client        The client owner of the account.
+   * @param amount        The initial amount in the account.
+   * @param branch
+   */
+<span class="fc" id="L29">  public Account(final long accountNumber, final Client client, final long amount, Branch branch) {</span>
+<span class="fc" id="L30">    this.accountNumber = accountNumber;</span>
+<span class="fc" id="L31">    this.client = client;</span>
+<span class="fc" id="L32">    currentBalance = amount;</span>
+<span class="fc" id="L33">    this.branch = branch;</span>
+<span class="fc" id="L34">    accountName = &quot;Current&quot;;</span>
+<span class="fc" id="L35">    accountState = AccountState.OPEN;</span>
+<span class="fc" id="L36">  }</span>
+
+  /**
+   * The account number.
+   *
+   * @return The account number.
+   */
+  public long getAccountNumber() {
+<span class="fc" id="L44">    return accountNumber;</span>
+  }
+
+  /**
+   * The client owner of the account.
+   *
+   * @return The client owner of the account.
+   */
+  public Client getClient() {
+<span class="fc" id="L53">    return client;</span>
+  }
+
+  /**
+   * Returns the account statement.
+   *
+   * @return The account statement.
+   */
+  public AccountStatement getAccountStatement() {
+<span class="fc" id="L62">    return accountStatement;</span>
+  }
+
+  /**
+   * Returns the current balance.
+   *
+   * @return The current balance.
+   */
+  public long getCurrentBalance() {
+<span class="fc" id="L71">    return currentBalance;</span>
+  }
+
+  /**
+   * Adds the passed amount to the balance of the account.
+   *
+   * @param amount The amount to add to the balance.
+   * @throws AccountException If the account is not in an OPEN state.
+   */
+  public void addToBalance(final long amount) throws AccountException {
+<span class="pc bpc" id="L81" title="1 of 2 branches missed.">    if (getAccountState() != AccountState.OPEN) {</span>
+<span class="nc" id="L82">      throw new AccountException(&quot;Cannot add to balance, account is closed.&quot;);</span>
+    }
+<span class="fc" id="L84">    currentBalance += amount;</span>
+<span class="fc" id="L85">  }</span>
+
+  /**
+   * Takes the passed amount from the existing balance.
+   *
+   * @param amount The amount to take.
+   * @throws AccountException If the account is not OPEN, of the balance is lower than the amount to
+   *     take.
+   */
+  public void takeFromBalance(final long amount) throws AccountException {
+<span class="pc bpc" id="L95" title="1 of 2 branches missed.">    if (getAccountState() != AccountState.OPEN) {</span>
+<span class="nc" id="L96">      throw new AccountException(&quot;Cannot take from balance, account is closed.&quot;);</span>
+    }
+<span class="fc bfc" id="L98" title="All 2 branches covered.">    if (currentBalance - amount &lt; 0) {</span>
+<span class="fc" id="L99">      throw new AccountException(</span>
+          &quot;Trying to take &quot;
+              + amount
+              + &quot; from the existing balance of &quot;
+              + currentBalance
+              + &quot;. Not enough funds.&quot;);
+    }
+<span class="fc" id="L106">    currentBalance -= amount;</span>
+<span class="fc" id="L107">  }</span>
+
+  /**
+   * Returns the account name.
+   *
+   * @return The account name.
+   */
+  public String getAccountName() {
+<span class="fc" id="L115">    return accountName;</span>
+  }
+
+  /**
+   * Sets the account name to the passed string.
+   *
+   * @param accountName The account name to set.
+   * @throws AccountException If the account is not in an OPEN state.
+   */
+  public void setAccountName(final String accountName) throws AccountException {
+<span class="nc bnc" id="L125" title="All 2 branches missed.">    if (getAccountState() != AccountState.OPEN) {</span>
+<span class="nc" id="L126">      throw new AccountException(&quot;Cannot change account name, account is closed.&quot;);</span>
+    }
+<span class="nc" id="L128">    this.accountName = accountName;</span>
+<span class="nc" id="L129">  }</span>
+
+  /**
+   * Returns the current account state.
+   *
+   * @return The current account state.
+   */
+  public AccountState getAccountState() {
+<span class="fc" id="L137">    return accountState;</span>
+  }
+
+  /**
+   * Closes the account.
+   *
+   * @throws AccountException If the account is not in an OPEN state.
+   */
+  public void closeAccount() throws AccountException {
+<span class="nc bnc" id="L146" title="All 2 branches missed.">    if (getAccountState() != AccountState.OPEN) {</span>
+<span class="nc" id="L147">      throw new AccountException(&quot;Account is already closed.&quot;);</span>
+    }
+<span class="nc" id="L149">    accountState = AccountState.CLOSED;</span>
+<span class="nc" id="L150">  }</span>
+
+  /**
+   * Adds a transaction to the account transaction statement.
+   *
+   * @param transaction The transaction to add.
+   * @throws AccountException If the account is not in an OPEN state.
+   */
+  public void addTransaction(final Transaction transaction) throws AccountException {
+<span class="nc bnc" id="L159" title="All 2 branches missed.">    if (getAccountState() != AccountState.OPEN) {</span>
+<span class="nc" id="L160">      throw new AccountException(&quot;The account is closed, you cannot add a transaction.&quot;);</span>
+    }
+<span class="nc" id="L162">    accountStatement.addTransaction(transaction);</span>
+<span class="nc" id="L163">  }</span>
+
+  /**
+   * Returns a string representation of the account.
+   *
+   * @return String representation of the account.
+   */
+  public String toString() {
+<span class="nc" id="L171">    String output = &quot;Account: | &quot;;</span>
+
+<span class="nc" id="L173">    output +=</span>
+        &quot;Acc #: &quot;
+<span class="nc" id="L175">            + getAccountNumber()</span>
+            + &quot;\t | &quot;
+            + &quot;Acc name: &quot;
+<span class="nc" id="L178">            + getAccountName()</span>
+            + &quot;\t | &quot;
+            + &quot;Acc holder: &quot;
+<span class="nc" id="L181">            + getClient().getClientName()</span>
+            + &quot;\t | &quot;
+            + &quot;Acc balance: &quot;
+<span class="nc" id="L184">            + getCurrentBalance()</span>
+            + &quot;\t | &quot;
+            + &quot;Acc state: &quot;
+<span class="nc" id="L187">            + getAccountState()</span>
+            + &quot;\t |\n&quot;;
+
+<span class="nc" id="L190">    output += accountStatement.toString();</span>
+
+<span class="nc" id="L192">    return output;</span>
+  }
+
+  /** AccountState. */
+<span class="fc" id="L196">  public enum AccountState {</span>
+<span class="fc" id="L197">    OPEN,</span>
+<span class="fc" id="L198">    CLOSED</span>
+  }
+
+  @Override
+  public boolean equals(Object o) {
+<span class="nc bnc" id="L203" title="All 2 branches missed.">    if (this == o) return true;</span>
+<span class="nc bnc" id="L204" title="All 2 branches missed.">    if (o == null) return false;</span>
+<span class="nc bnc" id="L205" title="All 2 branches missed.">    if (!(o instanceof Account)) return false;</span>
+<span class="nc" id="L206">    Account account = (Account) o;</span>
+<span class="nc bnc" id="L207" title="All 2 branches missed.">    return accountNumber == account.accountNumber;</span>
+  }
+
+  /** AccountStatement of an account, which holds the list of all executed transactions. */
+  public class AccountStatement {
+    private final List&lt;Transaction&gt; transactions;
+
+    /** Constructor. */
+<span class="fc" id="L215">    public AccountStatement() {</span>
+<span class="fc" id="L216">      transactions = new ArrayList&lt;Transaction&gt;();</span>
+<span class="fc" id="L217">    }</span>
+
+    /**
+     * returns the transactions list.
+     *
+     * @return The transactions list.
+     */
+    public List&lt;Transaction&gt; getTransactions() {
+<span class="fc" id="L225">      return transactions;</span>
+    }
+
+    /**
+     * Adds the passed transaction instance to the transactions list.
+     *
+     * @param transaction The transaction to add to the transactions list.
+     */
+    private void addTransaction(final Transaction transaction) {
+<span class="nc" id="L234">      transactions.add(transaction);</span>
+<span class="nc" id="L235">    }</span>
+
+    /**
+     * Returns a string representation of the Account Statement.
+     *
+     * @return String representation of the Account Statement.
+     */
+    public String toString() {
+<span class="nc" id="L243">      String output = &quot;&quot;;</span>
+
+<span class="nc bnc" id="L245" title="All 2 branches missed.">      if (transactions.size() == 0) {</span>
+<span class="nc" id="L246">        return &quot;Account statement empty.&quot;;</span>
+      }
+<span class="nc bnc" id="L248" title="All 2 branches missed.">      for (int i = transactions.size() - 1; i &gt;= 0; i--) {</span>
+<span class="nc" id="L249">        output += transactions.get(i) + &quot;\n&quot;;</span>
+      }
+
+<span class="nc" id="L252">      return output;</span>
+    }
+
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

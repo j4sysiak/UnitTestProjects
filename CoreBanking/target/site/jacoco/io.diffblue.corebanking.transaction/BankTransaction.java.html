@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BankTransaction.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CoreBanking</a> &gt; <a href="index.source.html" class="el_package">io.diffblue.corebanking.transaction</a> &gt; <span class="el_source">BankTransaction.java</span></div><h1>BankTransaction.java</h1><pre class="source lang-java linenums">package io.diffblue.corebanking.transaction;
+
+import io.diffblue.corebanking.account.Account;
+import io.diffblue.corebanking.account.AccountException;
+
+import java.util.Date;
+
+public class BankTransaction extends Transaction {
+  private final Account sourceAcc;
+  private final Account targetAcc;
+
+  /**
+   * BankTransaction constructor.
+   *
+   * @param amount The amount of the transaction.
+   * @param date The date of the transaction.
+   * @param sourceAcc The source account.
+   * @param targetAcc The target account.
+   */
+  public BankTransaction(long amount, Date date, Account sourceAcc, Account targetAcc) {
+<span class="nc" id="L21">    super(amount, date);</span>
+<span class="nc" id="L22">    this.sourceAcc = sourceAcc;</span>
+<span class="nc" id="L23">    this.targetAcc = targetAcc;</span>
+<span class="nc" id="L24">  }</span>
+
+  /**
+   * Returns the source account number.
+   *
+   * @return The source account number.
+   */
+  public String getSource() {
+<span class="nc" id="L32">    return &quot;&quot; + this.sourceAcc.getAccountNumber();</span>
+  }
+
+  /**
+   * Returns the target account number.
+   *
+   * @return The target account number.
+   */
+  public String getTarget() {
+<span class="nc" id="L41">    return &quot;&quot; + this.targetAcc.getAccountNumber();</span>
+  }
+
+  /**
+   * Clones a BankTransaction instance.
+   *
+   * @return The cloned instance.
+   */
+  private BankTransaction cloneBankTransaction() {
+<span class="nc" id="L50">    BankTransaction clone =</span>
+        new BankTransaction(
+<span class="nc" id="L52">            this.getTransactionAmount(), this.getTransactionDate(), this.sourceAcc, this.targetAcc);</span>
+<span class="nc" id="L53">    clone.transactionState = this.transactionState;</span>
+<span class="nc" id="L54">    return clone;</span>
+  }
+
+  /**
+   * Executes the BankTransaction.
+   *
+   * @throws TransactionException If the transaction was previously executed, or if at least one of
+   *     the accounts is closed.
+   */
+  public void executeTransaction() throws TransactionException {
+<span class="nc bnc" id="L64" title="All 2 branches missed.">    if (targetAcc.getAccountState() != Account.AccountState.OPEN</span>
+<span class="nc bnc" id="L65" title="All 2 branches missed.">        || sourceAcc.getAccountState() != Account.AccountState.OPEN) {</span>
+<span class="nc" id="L66">      throw new TransactionException(&quot;Both accounts must be in an open state.&quot;);</span>
+    }
+<span class="nc bnc" id="L68" title="All 2 branches missed.">    if (this.getTransactionState() != TransactionState.NOT_EXECUTED_YET) {</span>
+<span class="nc" id="L69">      throw new TransactionException(&quot;This transaction was already executed!&quot;);</span>
+    }
+
+    // Execute the transaction
+    try {
+<span class="nc" id="L74">      this.sourceAcc.takeFromBalance(this.getTransactionAmount());</span>
+<span class="nc" id="L75">      this.targetAcc.addToBalance(this.getTransactionAmount());</span>
+<span class="nc" id="L76">      this.setAccountBalanceAfterTransaction(this.targetAcc.getCurrentBalance());</span>
+<span class="nc" id="L77">      this.markTransactionAsExecuted();</span>
+<span class="nc" id="L78">    } catch (AccountException e) {</span>
+<span class="nc" id="L79">      e.printStackTrace();</span>
+<span class="nc" id="L80">      this.setAccountBalanceAfterTransaction(this.targetAcc.getCurrentBalance());</span>
+<span class="nc" id="L81">      this.setCurrentStateFailed();</span>
+<span class="nc" id="L82">      throw new TransactionException(e.getMessage());</span>
+<span class="nc" id="L83">    }</span>
+
+    // Add transaction to statements
+    try {
+<span class="nc" id="L87">      BankTransaction cloneForSource = this.cloneBankTransaction();</span>
+<span class="nc" id="L88">      cloneForSource.setAccountBalanceAfterTransaction(sourceAcc.getCurrentBalance());</span>
+<span class="nc" id="L89">      this.sourceAcc.addTransaction(cloneForSource);</span>
+<span class="nc" id="L90">      this.targetAcc.addTransaction(this);</span>
+<span class="nc" id="L91">    } catch (AccountException e) {</span>
+<span class="nc" id="L92">      e.printStackTrace();</span>
+<span class="nc" id="L93">      throw new TransactionException(e.getMessage());</span>
+<span class="nc" id="L94">    }</span>
+<span class="nc" id="L95">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

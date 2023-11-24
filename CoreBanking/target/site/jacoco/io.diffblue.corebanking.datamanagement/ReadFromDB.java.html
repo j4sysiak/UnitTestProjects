@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ReadFromDB.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CoreBanking</a> &gt; <a href="index.source.html" class="el_package">io.diffblue.corebanking.datamanagement</a> &gt; <span class="el_source">ReadFromDB.java</span></div><h1>ReadFromDB.java</h1><pre class="source lang-java linenums">package io.diffblue.corebanking.datamanagement;
+
+import io.diffblue.corebanking.account.Account;
+import io.diffblue.corebanking.branch.Branch;
+import io.diffblue.corebanking.transaction.CashTransaction;
+import io.diffblue.corebanking.transaction.TransactionException;
+import io.diffblue.corebanking.CoreBanking;
+import io.diffblue.corebanking.client.Client;
+
+import java.util.Date;
+
+<span class="nc" id="L12">public class ReadFromDB {</span>
+  public static CoreBanking readFromDB() throws TransactionException {
+<span class="nc" id="L14">    CoreBanking coreBanking = new CoreBanking();</span>
+<span class="nc" id="L15">    readFromDB(coreBanking);</span>
+<span class="nc" id="L16">    return coreBanking;</span>
+  }
+
+  public static void readFromDB(CoreBanking coreBanking) throws TransactionException {
+<span class="nc" id="L20">    coreBanking.purgeCoreBanking();</span>
+
+<span class="nc" id="L22">    tempStaticData(coreBanking);</span>
+<span class="nc" id="L23">  }</span>
+
+  private static void tempStaticData(CoreBanking coreBanking) throws TransactionException {
+    // Clients 1
+<span class="nc" id="L27">    Client client1 = new Client(&quot;John Field&quot;);</span>
+<span class="nc" id="L28">    Account acc1cli1 = coreBanking.openNewAccount(client1, 100, new Branch());</span>
+<span class="nc" id="L29">    Account acc2cli1 = coreBanking.openNewAccount(client1, 100, new Branch());</span>
+<span class="nc" id="L30">    Account acc3cli1 = coreBanking.openNewAccount(client1, 100, new Branch());</span>
+
+    // Client 2
+<span class="nc" id="L33">    Client client2 = new Client(&quot;Jane Robbins&quot;);</span>
+
+<span class="nc" id="L35">    Account acc1cli2 = coreBanking.openNewAccount(client2, 100, new Branch());</span>
+<span class="nc" id="L36">    Account acc2cli2 = coreBanking.openNewAccount(client2, 100, new Branch());</span>
+
+    // Client 3
+<span class="nc" id="L39">    Client client3 = new Client(&quot;Emily Simmons&quot;);</span>
+
+<span class="nc" id="L41">    Account acc1cli3 = coreBanking.openNewAccount(client3, 100, new Branch());</span>
+
+    // Add clients to coreBanking.
+<span class="nc" id="L44">    coreBanking.registerNewClient(client1);</span>
+<span class="nc" id="L45">    coreBanking.registerNewClient(client2);</span>
+<span class="nc" id="L46">    coreBanking.registerNewClient(client3);</span>
+
+    // Cash Transactions -- Add 100 to each account
+<span class="nc" id="L49">    new CashTransaction(100, new Date(2019, 11, 10), acc1cli1).executeTransaction();</span>
+<span class="nc" id="L50">    new CashTransaction(100, new Date(2019, 11, 11), acc2cli1).executeTransaction();</span>
+<span class="nc" id="L51">    new CashTransaction(100, new Date(2019, 11, 12), acc3cli1).executeTransaction();</span>
+<span class="nc" id="L52">    new CashTransaction(100, new Date(2019, 11, 13), acc1cli2).executeTransaction();</span>
+<span class="nc" id="L53">    new CashTransaction(100, new Date(2019, 11, 14), acc2cli2).executeTransaction();</span>
+<span class="nc" id="L54">    new CashTransaction(100, new Date(2019, 11, 15), acc1cli3).executeTransaction();</span>
+
+    // Cash transactions, invalid
+<span class="nc" id="L57">    new CashTransaction(-500, new Date(2019, 11, 13), acc1cli1).executeTransaction();</span>
+
+    // Bank Transactions
+    //        new BankTransaction(100, new Date(2019, 11, 15), acc1cli1,
+    // acc2cli1).executeTransaction();
+
+<span class="nc" id="L63">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

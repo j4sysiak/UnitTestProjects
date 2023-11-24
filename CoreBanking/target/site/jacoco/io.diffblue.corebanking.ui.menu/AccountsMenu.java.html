@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AccountsMenu.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CoreBanking</a> &gt; <a href="index.source.html" class="el_package">io.diffblue.corebanking.ui.menu</a> &gt; <span class="el_source">AccountsMenu.java</span></div><h1>AccountsMenu.java</h1><pre class="source lang-java linenums">package io.diffblue.corebanking.ui.menu;
+
+import io.diffblue.corebanking.account.Account;
+import io.diffblue.corebanking.CoreBanking;
+
+public class AccountsMenu extends Menu {
+  private static final String MENU_TITLE = &quot;Accounts Menu&quot;;
+<span class="nc" id="L8">  private static final String[] MENU_MAIN =</span>
+      new String[] {
+        &quot;1. Display all accounts&quot;, &quot;2. Open new account&quot;, &quot;3. Close account&quot;, &quot;0. Back&quot;
+      };
+
+  /**
+   * Constructor.
+   *
+   * @param coreBanking CoreBanking instance.
+   */
+  public AccountsMenu(CoreBanking coreBanking) {
+<span class="nc" id="L19">    super(MENU_TITLE, MENU_MAIN, coreBanking);</span>
+<span class="nc" id="L20">  }</span>
+
+  /**
+   * Executes the passed menu option.
+   *
+   * @param menuOpt The menu option to execute.
+   */
+  protected void executeMenuOption(int menuOpt) {
+<span class="nc bnc" id="L28" title="All 4 branches missed.">    switch (menuOpt) {</span>
+      case 1:
+<span class="nc" id="L30">        viewAccounts();</span>
+<span class="nc" id="L31">        break;</span>
+      case 2:
+<span class="nc" id="L33">        createNewAccount();</span>
+<span class="nc" id="L34">        break;</span>
+      case 0:
+<span class="nc" id="L36">        System.out.println();</span>
+<span class="nc" id="L37">        break;</span>
+      default:
+<span class="nc" id="L39">        System.out.println(&quot;This should never happen... Invalid option: &quot; + menuOpt);</span>
+        break;
+    }
+<span class="nc" id="L42">  }</span>
+
+  /** Outputs the existing accounts to stdout. */
+  private void viewAccounts() {
+<span class="nc bnc" id="L46" title="All 2 branches missed.">    for (Account account : this.coreBanking.getAccounts()) {</span>
+<span class="nc" id="L47">      System.out.println(account);</span>
+<span class="nc" id="L48">    }</span>
+<span class="nc" id="L49">  }</span>
+
+  /**
+   * Takes the input required to create a new account, and creates it, adding it to the CoreBanking
+   * instance.
+   */
+<span class="nc" id="L55">  private void createNewAccount() {}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

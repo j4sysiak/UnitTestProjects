@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CheckCompliance.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CoreBanking</a> &gt; <a href="index.source.html" class="el_package">io.diffblue.corebanking.compliance</a> &gt; <span class="el_source">CheckCompliance.java</span></div><h1>CheckCompliance.java</h1><pre class="source lang-java linenums">package io.diffblue.corebanking.compliance;
+
+import io.diffblue.corebanking.account.Account;
+import io.diffblue.corebanking.compliance.rules.ComplianceRule;
+import io.diffblue.corebanking.compliance.rules.ComplianceRuleBalanceAboveOrEqualToZero;
+
+import java.util.ArrayList;
+import java.util.List;
+
+<span class="nc" id="L10">public class CheckCompliance {</span>
+
+<span class="fc" id="L12">  public static final List&lt;ComplianceRule&gt; COMPLIANCE_RULES = new ArrayList&lt;ComplianceRule&gt;();</span>
+
+  static {
+<span class="fc" id="L15">    COMPLIANCE_RULES.add(new ComplianceRuleBalanceAboveOrEqualToZero());</span>
+<span class="fc" id="L16">  }</span>
+
+  /**
+   * Checks that the passed accounts are compliant with all the compliance rules.
+   *
+   * @param accountsToVerify Accounts to check compliance against the compliance rules.
+   * @return The accounts that failed the compliance rules.
+   */
+  public static void checkAccountCompliance(List&lt;Account&gt; accountsToVerify) {
+
+    // For all the passed accounts
+<span class="nc bnc" id="L27" title="All 2 branches missed.">    for (Account a : accountsToVerify) {</span>
+
+      // Loop through all the existing compliance rules
+<span class="nc bnc" id="L30" title="All 2 branches missed.">      for (ComplianceRule rule : COMPLIANCE_RULES) {</span>
+<span class="nc" id="L31">        rule.validateAccountCompliance(a);</span>
+<span class="nc" id="L32">      }</span>
+<span class="nc" id="L33">    }</span>
+<span class="nc" id="L34">  }</span>
+
+  /**
+   * Outputs the result of the compliance check, printing the compliant accounts followed by failed
+   * accounts.
+   */
+<span class="nc" id="L40">  public static void viewComplianceCheckResults() {}</span>
+
+  /** Purges the previously stored compliance check results (passed/failed accounts). */
+  public static void purgeComplianceResults() {
+<span class="fc bfc" id="L44" title="All 2 branches covered.">    for (ComplianceRule rule : COMPLIANCE_RULES) {</span>
+<span class="fc" id="L45">      rule.purgeAccounts();</span>
+<span class="fc" id="L46">    }</span>
+<span class="fc" id="L47">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

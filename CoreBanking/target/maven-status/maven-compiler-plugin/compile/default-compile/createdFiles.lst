@@ -18,9 +18,11 @@ io\diffblue\corebanking\ui\CoreBankingTextUI.class
 io\diffblue\corebanking\datamanagement\WriteToDB.class
 io\diffblue\corebanking\ui\menu\ComplianceMenu.class
 io\diffblue\corebanking\transaction\CashTransaction.class
+io\diffblue\corebanking\branch\Branch.class
 io\diffblue\corebanking\CoreBankingException.class
 io\diffblue\corebanking\CoreBanking.class
 io\diffblue\corebanking\transaction\BankTransaction.class
+io\diffblue\corebanking\branch\BranchException.class
 io\diffblue\corebanking\transaction\TransactionException.class
 io\diffblue\corebanking\client\Client.class
 io\diffblue\corebanking\transaction\Transaction.class

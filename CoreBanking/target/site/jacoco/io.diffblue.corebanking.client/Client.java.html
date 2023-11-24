@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Client.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CoreBanking</a> &gt; <a href="index.source.html" class="el_package">io.diffblue.corebanking.client</a> &gt; <span class="el_source">Client.java</span></div><h1>Client.java</h1><pre class="source lang-java linenums">package io.diffblue.corebanking.client;
+
+import io.diffblue.corebanking.account.Account;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/** A bank client. */
+public class Client {
+  private String clientName;
+  private List&lt;Account&gt; accounts;
+
+  /**
+   * Constructor.
+   *
+   * @param clientName The name of the client.
+   */
+<span class="fc" id="L18">  public Client(String clientName) {</span>
+<span class="fc" id="L19">    this.clientName = clientName;</span>
+<span class="fc" id="L20">    this.accounts = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L21">  }</span>
+
+  /**
+   * Returns the client name.
+   *
+   * @return The client name.
+   */
+  public String getClientName() {
+<span class="nc" id="L29">    return this.clientName;</span>
+  }
+
+  /**
+   * Adds an account to this client.
+   *
+   * @param account The account to add to the client.
+   */
+  public void addAccount(Account account) {
+<span class="nc" id="L38">    this.accounts.add(account);</span>
+<span class="nc" id="L39">  }</span>
+
+  /**
+   * Returns the list of all accounts of the client.
+   *
+   * @return The list of all accounts of the client.
+   */
+  public List&lt;Account&gt; getAccounts() {
+<span class="fc" id="L47">    return this.accounts;</span>
+  }
+
+  /**
+   * Returns a string representation of the client.
+   *
+   * @return String representation of the client.
+   */
+  public String toString() {
+<span class="nc" id="L56">    String output = &quot;&quot;;</span>
+
+<span class="nc" id="L58">    output += &quot;Client name: &quot; + this.clientName + &quot;\n&quot;;</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">    for (int j = 0; j &lt; this.getAccounts().size(); j++) {</span>
+<span class="nc" id="L60">      output += this.getAccounts().get(j).toString() + &quot;\n&quot;;</span>
+    }
+
+<span class="nc bnc" id="L63" title="All 2 branches missed.">    if(output.isEmpty()) {</span>
+      // Dead code
+<span class="nc" id="L65">      output += &quot;The details of this client are empty.&quot;;</span>
+    }
+
+<span class="nc" id="L68">    return output;</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

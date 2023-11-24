@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Menu.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CoreBanking</a> &gt; <a href="index.source.html" class="el_package">io.diffblue.corebanking.ui.menu</a> &gt; <span class="el_source">Menu.java</span></div><h1>Menu.java</h1><pre class="source lang-java linenums">package io.diffblue.corebanking.ui.menu;
+
+import io.diffblue.corebanking.CoreBanking;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public abstract class Menu {
+  protected final CoreBanking coreBanking;
+  private final String MENU_TITLE;
+  private final String[] MENU_ITEMS;
+
+  /**
+   * Constructor.
+   *
+   * @param menuItems The menu items.
+   */
+<span class="nc" id="L18">  protected Menu(String menuTitle, String[] menuItems, CoreBanking coreBanking) {</span>
+<span class="nc" id="L19">    this.MENU_TITLE = menuTitle;</span>
+<span class="nc" id="L20">    this.MENU_ITEMS = menuItems;</span>
+<span class="nc" id="L21">    this.coreBanking = coreBanking;</span>
+<span class="nc" id="L22">  }</span>
+
+  /** Prints the passed menu. */
+  private void printMenu() {
+<span class="nc" id="L26">    System.out.println(&quot;#### &quot; + this.MENU_TITLE + &quot; ####&quot; + &quot;\n&quot;);</span>
+<span class="nc bnc" id="L27" title="All 2 branches missed.">    for (String s : MENU_ITEMS) {</span>
+<span class="nc" id="L28">      System.out.println(s);</span>
+    }
+<span class="nc" id="L30">    System.out.println();</span>
+<span class="nc" id="L31">  }</span>
+
+  /**
+   * Executes the passed menu option.
+   *
+   * @param menuOpt The menu option to execute.
+   */
+  protected abstract void executeMenuOption(int menuOpt);
+
+  /**
+   * Reads a menu option.
+   *
+   * @return A valid menu option.
+   */
+  private int readMenuOption() {
+<span class="nc" id="L46">    int menuOpt = -1;</span>
+
+    do {
+<span class="nc" id="L49">      System.out.println(&quot;Please select a menu option: &quot;);</span>
+
+      try {
+<span class="nc" id="L52">        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));</span>
+<span class="nc" id="L53">        menuOpt = Integer.parseInt(reader.readLine());</span>
+<span class="nc" id="L54">      } catch (Exception e) {</span>
+<span class="nc" id="L55">        menuOpt = -1;</span>
+<span class="nc" id="L56">      }</span>
+
+      // Make sure the user selects an available option
+<span class="nc bnc" id="L59" title="All 4 branches missed.">      if (menuOpt &lt; 0 || menuOpt &gt;= MENU_ITEMS.length) {</span>
+<span class="nc" id="L60">        System.out.println(&quot;Invalid option.&quot;);</span>
+<span class="nc" id="L61">        menuOpt = -1;</span>
+      }
+
+<span class="nc bnc" id="L64" title="All 2 branches missed.">    } while (menuOpt &lt; 0);</span>
+
+<span class="nc" id="L66">    return menuOpt;</span>
+  }
+
+  /** Starts the execution of the menu. */
+  public void startMenu() {
+<span class="nc" id="L71">    int menuOpt = -1;</span>
+    do {
+<span class="nc" id="L73">      this.printMenu();</span>
+<span class="nc" id="L74">      menuOpt = this.readMenuOption();</span>
+<span class="nc" id="L75">      this.executeMenuOption(menuOpt);</span>
+<span class="nc bnc" id="L76" title="All 2 branches missed.">    } while (menuOpt != 0);</span>
+<span class="nc" id="L77">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

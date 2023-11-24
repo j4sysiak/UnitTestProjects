@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Branch.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CoreBanking</a> &gt; <a href="index.source.html" class="el_package">io.diffblue.corebanking.branch</a> &gt; <span class="el_source">Branch.java</span></div><h1>Branch.java</h1><pre class="source lang-java linenums">package io.diffblue.corebanking.branch;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+<span class="fc" id="L6">public class Branch {</span>
+    private int id;
+
+    public void setId(int id) {
+<span class="fc" id="L10">        this.id = id;</span>
+<span class="fc" id="L11">    }</span>
+
+    public void setName(String name) {
+<span class="fc" id="L14">        this.name = name;</span>
+<span class="fc" id="L15">    }</span>
+
+    public void setPostcode(String postcode) throws BranchException {
+<span class="fc" id="L18">        String regex = &quot;^[A-Z]{1,2}[0-9R][0-9A-Z]? [0-9][ABD-HJLNP-UW-Z]{2}$&quot;;</span>
+<span class="fc" id="L19">        Pattern pattern = Pattern.compile(regex);</span>
+<span class="fc" id="L20">        Matcher matcher = pattern.matcher(postcode);</span>
+
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        if (matcher.matches()) {</span>
+<span class="fc" id="L23">            this.postcode = postcode;</span>
+        } else {
+<span class="fc" id="L25">            throw new BranchException(&quot;Invalid postcode&quot;);</span>
+        }
+<span class="fc" id="L27">    }</span>
+
+    private String name;
+    private String postcode;
+
+    public int getId() {
+<span class="fc" id="L33">        return id;</span>
+    }
+
+    public String getName() {
+<span class="fc" id="L37">        return name;</span>
+    }
+
+    public String getPostcode() {
+<span class="fc" id="L41">        return postcode;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

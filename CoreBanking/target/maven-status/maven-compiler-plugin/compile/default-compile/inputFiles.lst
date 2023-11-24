@@ -5,9 +5,11 @@ C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\CoreBanking\src\main\j
 C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\CoreBanking\src\main\java\io\diffblue\corebanking\transaction\Transaction.java
 C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\CoreBanking\src\main\java\io\diffblue\corebanking\compliance\CheckCompliance.java
 C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\CoreBanking\src\main\java\io\diffblue\corebanking\account\AccountException.java
+C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\CoreBanking\src\main\java\io\diffblue\corebanking\branch\BranchException.java
 C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\CoreBanking\src\main\java\io\diffblue\corebanking\compliance\rules\ComplianceRule.java
 C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\CoreBanking\src\main\java\io\diffblue\corebanking\transaction\TransactionException.java
 C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\CoreBanking\src\main\java\io\diffblue\corebanking\client\Client.java
+C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\CoreBanking\src\main\java\io\diffblue\corebanking\branch\Branch.java
 C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\CoreBanking\src\main\java\io\diffblue\corebanking\transaction\CashTransaction.java
 C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\CoreBanking\src\main\java\io\diffblue\corebanking\datamanagement\ReadFromDB.java
 C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\CoreBanking\src\main\java\io\diffblue\corebanking\datamanagement\WriteToDB.java

@@ -1,0 +1,13 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+unit-testing-java,pl.devfoundry.testing.order,Order,0,50,0,2,0,14,0,9,0,8
+unit-testing-java,pl.devfoundry.testing.order,OrderStatus,0,34,0,0,0,2,0,1,0,1
+unit-testing-java,pl.devfoundry.testing.order,OrderBackup,0,47,0,2,0,13,0,6,0,5
+unit-testing-java,pl.devfoundry.testing.account,Account,3,48,1,3,1,19,1,9,0,8
+unit-testing-java,pl.devfoundry.testing.account,Address,0,9,0,0,0,4,0,1,0,1
+unit-testing-java,pl.devfoundry.testing.extensions,BeforeAfterExtension,0,11,0,0,0,5,0,3,0,3
+unit-testing-java,pl.devfoundry.testing.extensions,IAExceptionIgnoreExtension,2,16,1,1,1,5,1,3,0,3
+unit-testing-java,pl.devfoundry.testing.homework,Cargo,47,12,10,0,6,5,7,2,2,2
+unit-testing-java,pl.devfoundry.testing.homework,Coordinates,21,73,7,11,1,15,8,7,1,5
+unit-testing-java,pl.devfoundry.testing.homework,Unit,16,119,1,5,4,30,2,11,1,9
+unit-testing-java,pl.devfoundry.testing,Meal,26,85,7,9,3,23,6,11,1,8
+unit-testing-java,pl.devfoundry.testing,Cart,39,17,2,0,10,5,3,3,2,3

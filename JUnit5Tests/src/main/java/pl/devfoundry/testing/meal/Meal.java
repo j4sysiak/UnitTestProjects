@@ -1,10 +1,13 @@
-package pl.devfoundry.testing;
+package pl.devfoundry.testing.meal;
 
 public class Meal {
 
     private int price;
     private int quantity;
     private String name;
+
+    public Meal() {
+    }
 
     Meal(int price) {
         this.price = price;
@@ -64,4 +67,11 @@ public class Meal {
                 '}';
     }
 
+    int sumPrice() {
+        return getPrice() * getQuantity();
+    }
+
+    public String getName() {
+        return this.name;
+    }
 }

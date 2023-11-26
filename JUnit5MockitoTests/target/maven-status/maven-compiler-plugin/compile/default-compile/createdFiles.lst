@@ -1,0 +1,11 @@
+pl\devfoundry\testing\account\AccountService.class
+pl\devfoundry\testing\Cart.class
+pl\devfoundry\testing\order\Order.class
+pl\devfoundry\testing\account\Address.class
+pl\devfoundry\testing\extensions\BeforeAfterExtension.class
+pl\devfoundry\testing\account\IAccountRepository.class
+pl\devfoundry\testing\account\Account.class
+pl\devfoundry\testing\extensions\IAExceptionIgnoreExtension.class
+pl\devfoundry\testing\Meal.class
+pl\devfoundry\testing\order\OrderStatus.class
+pl\devfoundry\testing\order\OrderBackup.class

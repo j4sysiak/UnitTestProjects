@@ -1,0 +1,9 @@
+pl\devfoundry\testing\MealTest.class
+pl\devfoundry\testing\order\OrderTest.class
+pl\devfoundry\testing\order\OrderBackupTest.class
+pl\devfoundry\testing\account\AddressTest.class
+pl\devfoundry\testing\account\AccountTest.class
+pl\devfoundry\testing\account\IAccountRepositoryStub.class
+pl\devfoundry\testing\account\AccountServiceTest.class
+pl\devfoundry\testing\order\OrderStatusTest.class
+pl\devfoundry\testing\CartTest.class

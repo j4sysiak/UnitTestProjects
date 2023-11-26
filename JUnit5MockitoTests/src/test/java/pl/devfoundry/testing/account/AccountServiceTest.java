@@ -14,7 +14,7 @@ class AccountServiceTest {
 
         //given
         IAccountRepository accountRepositoryStub = new AccountRepositoryStub();
-        AccountService accountService = new AccountService(accountRepositoryStub);
+        AccountService accountService = new AccountService(accountRepositoryStub); // clue: tu ważne żebyśmy wstrzyknęli  stuba lub mocka
 
         //when
         List<Account> accountList = accountService.getAllActiveAccounts();

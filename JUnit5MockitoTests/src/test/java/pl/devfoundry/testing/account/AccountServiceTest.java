@@ -14,6 +14,7 @@ class AccountServiceTest {
 
         //given
         IAccountRepository accountRepositoryStub = new AccountRepositoryStub();
+        //clue: wrzucamy Stuba: accountRepositoryStub
         AccountService accountService = new AccountService(accountRepositoryStub); // clue: tu ważne żebyśmy wstrzyknęli  stuba lub mocka
 
         //when

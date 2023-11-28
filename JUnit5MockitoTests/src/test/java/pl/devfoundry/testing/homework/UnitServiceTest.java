@@ -44,7 +44,6 @@ public class UnitServiceTest {
         verify(cargoRepository).findCargoByName("package");
         assertThat(unit.getLoad(), is(5));
         assertThat(unit.getCargo().get(0), equalTo(cargo));
-
     }
 
     @Test

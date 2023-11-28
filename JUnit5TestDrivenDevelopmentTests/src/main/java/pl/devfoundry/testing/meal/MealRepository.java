@@ -68,9 +68,7 @@ public class MealRepository {
                     .filter(meal -> meal.getName().startsWith(mealName))
                     .collect(Collectors.toList());
         }
-
         return result;
-
     }
 
     public List<Meal> findByPrice(int price, SearchType type) {

@@ -4,75 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eeda1008-02d1-4078-a514-08045181b481" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Final_Sources/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Final_Sources/src/main/java/com/in28minutes/business/TodoBusinessImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Final_Sources/src/main/java/com/in28minutes/data/api/TodoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Final_Sources/src/main/java/com/in28minutes/powermock/SystemUnderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Final_Sources/src/main/java/com/in28minutes/powermock/UtilityClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/business/ListTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/business/TodoBusinessImplMockTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoInjectMocksTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/data/api/TodoServiceStub.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/mockito/FirstMockitoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/mockito/SpyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/powermock/MockingStaticMethodTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/data/api/TodoServiceStub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MockitoTutorialForBeginners.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/MockitoTutorialForBeginners.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mockito-Exact-Source-After-Video.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MockitoTutorialForBeginners.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mockito-real-world-example-with-spring.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/business/TodoBusinessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/business/TodoBusinessImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/data/api/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/data/api/TodoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/business/ClientBO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/business/ClientBOImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/business/exception/DifferentCurrenciesException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/helper/StringHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/Amount.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/AmountImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/ClientImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/ClientType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/Collateral.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/CollateralImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/CollateralType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/Currency.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/ProductImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/ProductType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/powermock/SystemUnderTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/powermock/UtilityClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/clarity/business/ClientBOTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/clarity/business/ClientBOTestRefactored.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoInjectMocksTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoRulesTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/data/stub/TodoServiceStub.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/ArraysCompareTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/ArraysTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/QuickBeforeAfterTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/StringHelperParameterizedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/StringHelperTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/suite/DummyTestSuite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/mockito/FirstMockitoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/mockito/HamcrestMatcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/mockito/HamcrestMatchersTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/mockito/ListTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/mockito/SpyTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/powermock/PowerMockitoMockingConstructorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/powermock/MockingConstructorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/powermock/PowerMockitoMockingStaticMethodTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/powermock/PowerMockitoTestingPrivateMethodTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/powermock/InvokingPrivateMethodTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test.iml" beforeDir="false" />
+    <list default="true" id="eeda1008-02d1-4078-a514-08045181b481" name="Changes" comment="29-11-2023 2207">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/FirstMockitoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +63,23 @@
       <recent name="com.in28minutes.business" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TodoBusinessImplStubTest">
+  <component name="RunManager" selected="JUnit.FirstMockitoTest.test">
+    <configuration name="FirstMockitoTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mockito-course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.in28minutes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.in28minutes" />
+      <option name="MAIN_CLASS_NAME" value="com.in28minutes.FirstMockitoTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TodoBusinessImplStubTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mockito-course" />
       <extension name="coverage">
@@ -180,6 +129,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FirstMockitoTest.test" />
         <item itemvalue="JUnit.TodoBusinessImplStubTest" />
         <item itemvalue="JUnit.TodoBusinessImplStubTest.usingAStub" />
         <item itemvalue="JUnit.TodoBusinessImplTest.retrieveTodosRelatedToSpring" />
@@ -195,6 +145,27 @@
       <option name="presentableId" value="Default" />
       <updated>1701291139943</updated>
     </task>
+    <task id="LOCAL-00001" summary="29-11-2023 2207">
+      <option name="closed" value="true" />
+      <created>1701292040103</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701292040104</updated>
+    </task>
+    <task id="LOCAL-00002" summary="29-11-2023 2207">
+      <option name="closed" value="true" />
+      <created>1701292062277</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701292062277</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="29-11-2023 2207" />
+    <option name="LAST_COMMIT_MESSAGE" value="29-11-2023 2207" />
   </component>
 </project>

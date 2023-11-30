@@ -17,10 +17,10 @@ class AccountServiceStubTest {
         AccountService accountService = new AccountService(accountRepositoryStub);
 
         //when
-        List<Account> accountList = accountService.getAllActiveAccounts();
+        List<Account> activeAccountList = accountService.getAllActiveAccounts();
 
         //then
-        assertThat(accountList, hasSize(2));
+        assertThat(activeAccountList, hasSize(2));
 
     }
 

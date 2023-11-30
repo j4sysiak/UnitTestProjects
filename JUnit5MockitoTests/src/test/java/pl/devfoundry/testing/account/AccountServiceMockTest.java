@@ -15,7 +15,7 @@ import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 
 @MockitoSettings(strictness = Strictness.STRICT_STUBS)
-class AccountServiceTest {
+class AccountServiceMockTest {
 
     @Test
     void getAllActiveAccounts() {

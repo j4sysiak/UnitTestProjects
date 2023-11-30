@@ -23,7 +23,6 @@ class Cart {
     }
 
     void simulateLargeOrder() {
-
         for(int i = 0; i < 1_000; i++) {
             Meal meal = new Meal(i%10, "Hamburger no " + i);
             Order order = new Order();
@@ -32,7 +31,6 @@ class Cart {
         }
         System.out.println("Cart size: " + orders.size());
         clearCart();
-
     }
 
 }

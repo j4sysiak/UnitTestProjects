@@ -13,6 +13,7 @@ import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.hasSize;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 @MockitoSettings(strictness = Strictness.STRICT_STUBS)
 class AccountServiceMockTest {
@@ -25,6 +26,8 @@ class AccountServiceMockTest {
         AccountRepository accountRepository = mock(AccountRepository.class);
         AccountService accountService = new AccountService(accountRepository);
         given(accountRepository.getAllAccounts()).willReturn(accounts);
+        // lub    when(accountRepository.getAllAccounts()).thenReturn(accounts);
+
 
         //when
         List<Account> activeAccountList = accountService.getAllActiveAccounts();

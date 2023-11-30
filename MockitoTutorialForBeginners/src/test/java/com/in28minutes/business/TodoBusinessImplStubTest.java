@@ -6,7 +6,6 @@ import com.in28minutes.data.api.TodoServiceStub;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 

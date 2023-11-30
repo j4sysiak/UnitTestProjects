@@ -27,10 +27,10 @@ class AccountServiceTest {
         given(accountRepository.getAllAccounts()).willReturn(accounts);
 
         //when
-        List<Account> accountList = accountService.getAllActiveAccounts();
+        List<Account> activeAccountList = accountService.getAllActiveAccounts();
 
         //then
-        assertThat(accountList, hasSize(2));
+        assertThat(activeAccountList, hasSize(2));
 
     }
 

@@ -12,13 +12,13 @@ class AccountService {
     }
 
     List<Account> getAllActiveAccounts() {
-        return accountRepository.getAllAccounts().stream()
+        return this.accountRepository.getAllAccounts().stream()
                 .filter(Account::isActive)
                 .collect(Collectors.toList());
     }
 
     List<String> findByName(String name) {
-        return accountRepository.getByName(name);
+        return this.accountRepository.getByName(name);
     }
 
 }

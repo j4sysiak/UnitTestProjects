@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eeda1008-02d1-4078-a514-08045181b481" name="Changes" comment="29-11-2023 2207">
-      <change beforePath="$PROJECT_DIR$/../JUnit5MockitoTests/src/test/java/pl/devfoundry/testing/account/AccountServiceMockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JUnit5MockitoTests/src/test/java/pl/devfoundry/testing/account/AccountServiceMockTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/ListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

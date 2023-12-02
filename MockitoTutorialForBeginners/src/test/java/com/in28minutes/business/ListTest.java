@@ -34,6 +34,7 @@ public class ListTest {
         List<String> list = mock(List.class);
         Mockito.when(list.get(0)).thenReturn("in28Minutes");
         assertEquals("in28Minutes", list.get(0));
+        assertEquals(null, list.get(1));
         assertNull(list.get(1));
     }
 

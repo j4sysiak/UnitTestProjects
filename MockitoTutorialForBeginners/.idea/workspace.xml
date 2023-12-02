@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eeda1008-02d1-4078-a514-08045181b481" name="Changes" comment="29-11-2023 2207">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/ListTest.java" afterDir="false" />
+    <list default="true" id="eeda1008-02d1-4078-a514-08045181b481" name="Changes" comment="02-12-2023 1656">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,18 +63,66 @@
       <recent name="com.in28minutes.business" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TodoBusinessImplMockitoTest.usingMockito">
-    <configuration name="FirstMockitoTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ListTest.letsMockListGet">
+    <configuration name="ListTest.letsMockListGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mockito-course" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.in28minutes.*" />
+          <option name="PATTERN" value="com.in28minutes.business.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.in28minutes" />
-      <option name="MAIN_CLASS_NAME" value="com.in28minutes.FirstMockitoTest" />
-      <option name="METHOD_NAME" value="test" />
+      <option name="PACKAGE_NAME" value="com.in28minutes.business" />
+      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.ListTest" />
+      <option name="METHOD_NAME" value="letsMockListGet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListTest.letsMockListGetWithAny" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mockito-course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.in28minutes.business.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.in28minutes.business" />
+      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.ListTest" />
+      <option name="METHOD_NAME" value="letsMockListGetWithAny" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListTest.letsMockListSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mockito-course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.in28minutes.business.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.in28minutes.business" />
+      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.ListTest" />
+      <option name="METHOD_NAME" value="letsMockListSize" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListTest.letsMockListSizeWithMultipleReturnValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mockito-course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.in28minutes.business.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.in28minutes.business" />
+      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.ListTest" />
+      <option name="METHOD_NAME" value="letsMockListSizeWithMultipleReturnValues" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -97,60 +144,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoBusinessImplStubTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mockito-course" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.in28minutes.business.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.in28minutes.business" />
-      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.TodoBusinessImplStubTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TodoBusinessImplStubTest.usingAStub" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mockito-course" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.in28minutes.business.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.in28minutes.business" />
-      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.TodoBusinessImplStubTest" />
-      <option name="METHOD_NAME" value="usingAStub" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TodoBusinessImplTest.retrieveTodosRelatedToSpring" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mockito-course" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.in28minutes.business.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.in28minutes.business" />
-      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.TodoBusinessImplTest" />
-      <option name="METHOD_NAME" value="retrieveTodosRelatedToSpring" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ListTest.letsMockListGet" />
+        <item itemvalue="JUnit.ListTest.letsMockListGetWithAny" />
+        <item itemvalue="JUnit.ListTest.letsMockListSizeWithMultipleReturnValues" />
+        <item itemvalue="JUnit.ListTest.letsMockListSize" />
         <item itemvalue="JUnit.TodoBusinessImplMockitoTest.usingMockito" />
-        <item itemvalue="JUnit.FirstMockitoTest.test" />
-        <item itemvalue="JUnit.TodoBusinessImplStubTest" />
-        <item itemvalue="JUnit.TodoBusinessImplStubTest.usingAStub" />
-        <item itemvalue="JUnit.TodoBusinessImplTest.retrieveTodosRelatedToSpring" />
       </list>
     </recent_temporary>
   </component>
@@ -179,12 +179,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701292062277</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="02-12-2023 1656">
+      <option name="closed" value="true" />
+      <created>1701532592648</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701532592648</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="29-11-2023 2207" />
-    <option name="LAST_COMMIT_MESSAGE" value="29-11-2023 2207" />
+    <MESSAGE value="02-12-2023 1656" />
+    <option name="LAST_COMMIT_MESSAGE" value="02-12-2023 1656" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

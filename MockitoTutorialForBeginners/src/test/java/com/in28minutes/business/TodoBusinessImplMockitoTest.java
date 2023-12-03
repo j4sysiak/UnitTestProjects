@@ -2,26 +2,38 @@ package com.in28minutes.business;
 
 import com.in28minutes.data.api.TodoService;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.*;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.Assert.assertEquals;
+import static org.hamcrest.CoreMatchers.is;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.*;
+import static org.mockito.BDDMockito.*;
 
+
+@ExtendWith(MockitoExtension.class)
 public class TodoBusinessImplMockitoTest {
+    @Mock
+    TodoService todoService;
+
+    @InjectMocks
+    TodoBusinessImpl todoBusinessImpl;
+
+    @Captor
+    ArgumentCaptor<String> stringArgumentCaptor;
 
     @Test
     public void usingMockito() {
-        TodoService todoService = mock(TodoService.class);
         List<String> allTodos = Arrays.asList("Learn Spring MVC",
                 "Learn Spring", "Learn to Dance");
+
         when(todoService.retrieveTodos("Ranga")).thenReturn(allTodos);
-        TodoBusinessImpl todoBusinessImpl = new TodoBusinessImpl(todoService);
+
         List<String> todos = todoBusinessImpl
                 .retrieveTodosRelatedToSpring("Ranga");
         assertEquals(2, todos.size());
@@ -29,8 +41,6 @@ public class TodoBusinessImplMockitoTest {
 
     @Test
     public void usingMockito_UsingBDD() {
-        TodoService todoService = mock(TodoService.class);
-        TodoBusinessImpl todoBusinessImpl = new TodoBusinessImpl(todoService);
         List<String> allTodos = Arrays.asList("Learn Spring MVC",
                 "Learn Spring", "Learn to Dance");
 
@@ -45,18 +55,13 @@ public class TodoBusinessImplMockitoTest {
         assertThat(todos.size(), is(2));
     }
 
-
     @Test
     public void letsTestDeleteNow() {
-
-        TodoService todoService = mock(TodoService.class);
 
         List<String> allTodos = Arrays.asList("Learn Spring MVC",
                 "Learn Spring", "Learn to Dance");
 
         when(todoService.retrieveTodos("Ranga")).thenReturn(allTodos);
-
-        TodoBusinessImpl todoBusinessImpl = new TodoBusinessImpl(todoService);
 
         todoBusinessImpl.deleteTodosNotRelatedToSpring("Ranga");
 
@@ -70,7 +75,20 @@ public class TodoBusinessImplMockitoTest {
         // atLeastOnce, atLeast
 
     }
+
+    @Test
+    public void captureArgument() {
+        List<String> allTodos = Arrays.asList("Learn Spring MVC",
+                "Learn Spring", "Learn to Dance");
+        Mockito.when(todoService.retrieveTodos("Ranga")).thenReturn(allTodos);
+
+        todoBusinessImpl.deleteTodosNotRelatedToSpring("Ranga");
+        Mockito.verify(todoService).deleteTodo(stringArgumentCaptor.capture());
+
+        assertEquals("Learn to Dance", stringArgumentCaptor.getValue());
+    }
 }
+
 
 
 

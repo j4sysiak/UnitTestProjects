@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eeda1008-02d1-4078-a514-08045181b481" name="Changes" comment="03-12-2023 1225">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/HamcrestMatcherTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/business/TodoBusinessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/business/TodoBusinessImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mockito-course-0.0.1-SNAPSHOT.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/business/TodoBusinessImplMockitoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/in28minutes/business/TodoBusinessImplMockitoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/data/api/TodoServiceStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/in28minutes/data/api/TodoServiceStub.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +69,24 @@
       <recent name="com.in28minutes.business" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TodoBusinessImplMockitoTest.letsTestDeleteNow">
-    <configuration name="ListTest.bddAliases_UsingGivenWillReturn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TodoBusinessImplMockitoRulesTest.usingMockito">
+    <configuration name="HamcrestMatcherTest.basicHamcrestMatchers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mockito-course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.in28minutes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.in28minutes" />
+      <option name="MAIN_CLASS_NAME" value="com.in28minutes.HamcrestMatcherTest" />
+      <option name="METHOD_NAME" value="basicHamcrestMatchers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoBusinessImplMockitoRulesTest.usingMockito" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mockito-course" />
       <extension name="coverage">
         <pattern>
@@ -77,46 +95,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.in28minutes.business" />
-      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.ListTest" />
-      <option name="METHOD_NAME" value="bddAliases_UsingGivenWillReturn" />
+      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.TodoBusinessImplMockitoRulesTest" />
+      <option name="METHOD_NAME" value="usingMockito" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ListTest.letsMockListGetWithAnyAndGetRuntimeException2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mockito-course" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.in28minutes.business.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.in28minutes.business" />
-      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.ListTest" />
-      <option name="METHOD_NAME" value="letsMockListGetWithAnyAndGetRuntimeException2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ListTest.letsMockListGetWithAnyAndGetRuntimeExceptionSecontParameterInGetMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mockito-course" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.in28minutes.business.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.in28minutes.business" />
-      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.ListTest" />
-      <option name="METHOD_NAME" value="letsMockListGetWithAnyAndGetRuntimeExceptionSecontParameterInGetMethod" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TodoBusinessImplMockitoTest.letsTestDeleteNow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TodoBusinessImplMockitoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mockito-course" />
       <extension name="coverage">
         <pattern>
@@ -126,7 +112,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.in28minutes.business" />
       <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.TodoBusinessImplMockitoTest" />
-      <option name="METHOD_NAME" value="letsTestDeleteNow" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoBusinessImplMockitoTest.usingMockito" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mockito-course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.in28minutes.business.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.in28minutes.business" />
+      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.TodoBusinessImplMockitoTest" />
+      <option name="METHOD_NAME" value="usingMockito" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -150,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TodoBusinessImplMockitoTest.letsTestDeleteNow" />
+        <item itemvalue="JUnit.TodoBusinessImplMockitoRulesTest.usingMockito" />
+        <item itemvalue="JUnit.TodoBusinessImplMockitoTest" />
+        <item itemvalue="JUnit.TodoBusinessImplMockitoTest.usingMockito" />
         <item itemvalue="JUnit.TodoBusinessImplMockitoTest.usingMockito_UsingBDD" />
-        <item itemvalue="JUnit.ListTest.bddAliases_UsingGivenWillReturn" />
-        <item itemvalue="JUnit.ListTest.letsMockListGetWithAnyAndGetRuntimeExceptionSecontParameterInGetMethod" />
-        <item itemvalue="JUnit.ListTest.letsMockListGetWithAnyAndGetRuntimeException2" />
+        <item itemvalue="JUnit.HamcrestMatcherTest.basicHamcrestMatchers" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701602751204</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="03-12-2023 1225">
+      <option name="closed" value="true" />
+      <created>1701603522151</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701603522151</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

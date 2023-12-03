@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.in28minutes.business.ListTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.663 s <<< FAILURE! - in com.in28minutes.business.ListTest
+letsMockListGetWithAny  Time elapsed: 0.128 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <in28Minutes>
+	at com.in28minutes.business.ListTest.letsMockListGetWithAny(ListTest.java:70)
+

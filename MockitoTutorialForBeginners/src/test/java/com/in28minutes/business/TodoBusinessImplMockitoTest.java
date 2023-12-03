@@ -45,6 +45,7 @@ public class TodoBusinessImplMockitoTest {
         assertThat(todos.size(), is(2));
     }
 
+
     @Test
     public void letsTestDeleteNow() {
 

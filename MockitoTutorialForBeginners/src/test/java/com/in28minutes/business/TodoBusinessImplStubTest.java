@@ -18,4 +18,5 @@ public class TodoBusinessImplStubTest {
                 .retrieveTodosRelatedToSpring("Ranga");
         assertEquals(2, todos.size());
     }
+
 }

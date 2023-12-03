@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/business/TodoBusinessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/business/TodoBusinessImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/data/api/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/data/api/TodoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/ListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/ListTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/data/api/TodoServiceStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/data/api/TodoServiceStub.java" afterDir="false" />
@@ -153,8 +152,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TodoBusinessImplMockitoTest.letsTestDeleteNow" />
-        <item itemvalue="JUnit.ListTest.bddAliases_UsingGivenWillReturn" />
         <item itemvalue="JUnit.TodoBusinessImplMockitoTest.usingMockito_UsingBDD" />
+        <item itemvalue="JUnit.ListTest.bddAliases_UsingGivenWillReturn" />
         <item itemvalue="JUnit.ListTest.letsMockListGetWithAnyAndGetRuntimeExceptionSecontParameterInGetMethod" />
         <item itemvalue="JUnit.ListTest.letsMockListGetWithAnyAndGetRuntimeException2" />
       </list>
@@ -221,6 +220,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/in28minutes/business/TodoBusinessImpl.java</url>
           <line>16</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/in28minutes/business/TodoBusinessImpl.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

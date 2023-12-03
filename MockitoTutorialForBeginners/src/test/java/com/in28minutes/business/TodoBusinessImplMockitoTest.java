@@ -2,7 +2,6 @@ package com.in28minutes.business;
 
 import com.in28minutes.data.api.TodoService;
 import org.junit.jupiter.api.Test;
-import org.mockito.BDDMockito;
 import org.mockito.Mockito;
 
 import java.util.Arrays;
@@ -12,7 +11,6 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.BDDMockito.then;
 import static org.mockito.Mockito.*;
 
 public class TodoBusinessImplMockitoTest {

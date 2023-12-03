@@ -6,9 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mockito-course" />
+        <module name="MockitoTutorialForBeginners" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="11">
+      <module name="JUnit5MockitoTests" target="11" />
+      <module name="mockito-course" target="11" />
+      <module name="mockito-tutorial" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

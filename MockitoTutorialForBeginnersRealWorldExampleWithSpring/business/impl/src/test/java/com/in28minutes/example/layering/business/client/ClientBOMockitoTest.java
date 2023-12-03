@@ -56,12 +56,9 @@ public class ClientBOMockitoTest {
 
 		stub(productDO.getAllProducts(anyInt())).toReturn(products);
 
-		assertAmountEquals(
-				new AmountImpl(new BigDecimal("11.0"), Currency.EURO), clientBO
-						.getClientProductsSum(DUMMY_CLIENT_ID));
-	}
+		Amount expectedAmount = new AmountImpl(new BigDecimal("11.0"), Currency.EURO);
+		Amount actualAmount = clientBO.getClientProductsSum(DUMMY_CLIENT_ID);
 
-	private void assertAmountEquals(Amount expectedAmount, Amount actualAmount) {
 		assertEquals(expectedAmount.getCurrency(), actualAmount.getCurrency());
 		assertEquals(expectedAmount.getValue(), actualAmount.getValue());
 	}
@@ -69,17 +66,16 @@ public class ClientBOMockitoTest {
 	private Product createProductWithAmount(String amount) {
 		return new ProductImpl(100, "Product 15", ProductType.BANK_GUARANTEE,
 				new AmountImpl(new BigDecimal(amount), Currency.EURO));
+
 	}
 
 	@Test
 	public void saveChangedProducts_ProductInScreenAndNotInDatabase_ProductIsInserted() {
 
 		List<Product> screenProducts = Arrays.asList(createProduct());
+		List<Product> emptyDatabaseProducts = new ArrayList<>();
 
-		List<Product> emptyDatabaseProducts = new ArrayList<Product>();
-
-		stub(productDO.getAllProducts(anyInt()))
-				.toReturn(emptyDatabaseProducts);
+		stub(productDO.getAllProducts(anyInt())).toReturn(emptyDatabaseProducts);
 
 		clientBO.saveChangedProducts(1, screenProducts);
 

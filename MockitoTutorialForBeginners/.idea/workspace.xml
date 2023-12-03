@@ -5,13 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eeda1008-02d1-4078-a514-08045181b481" name="Changes" comment="03-12-2023 1225">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/HamcrestMatcherTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/SpyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step12.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mockito-course-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/business/TodoBusinessImplMockitoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/in28minutes/business/TodoBusinessImplMockitoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/in28minutes/business/TodoBusinessImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/in28minutes/business/TodoBusinessImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/in28minutes/data/api/TodoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/in28minutes/data/api/TodoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.in28minutes.FirstMockitoTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.in28minutes.HamcrestMatcherTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.in28minutes.business.ListTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.in28minutes.business.TodoBusinessImplMockitoTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.in28minutes.business.TodoBusinessImplStubTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.in28minutes.FirstMockitoTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.in28minutes.HamcrestMatcherTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.in28minutes.business.ListTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.in28minutes.business.TodoBusinessImplMockitoTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.in28minutes.business.TodoBusinessImplStubTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/FirstMockitoTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/HamcrestMatcherTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/business/ListTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/business/TodoBusinessImplMockitoRulesTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/business/TodoBusinessImplMockitoTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/business/TodoBusinessImplStubTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/data/api/TodoServiceStub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/Step13.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/Step14.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/Step15.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/Step16.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/Step17.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/Step18.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/StepReference.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/business/impl/src/main/java/com/in28minutes/example/layering/business/impl/client/ClientBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/business/impl/src/main/java/com/in28minutes/example/layering/business/impl/client/ClientBOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/business/impl/src/test/java/com/in28minutes/example/layering/business/client/ClientBOMockitoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/business/impl/src/test/java/com/in28minutes/example/layering/business/client/ClientBOMockitoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,25 +99,9 @@
       <recent name="com.in28minutes.business" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TodoBusinessImplMockitoRulesTest.usingMockito">
-    <configuration name="HamcrestMatcherTest.basicHamcrestMatchers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mockito-course" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.in28minutes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.in28minutes" />
-      <option name="MAIN_CLASS_NAME" value="com.in28minutes.HamcrestMatcherTest" />
-      <option name="METHOD_NAME" value="basicHamcrestMatchers" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TodoBusinessImplMockitoRulesTest.usingMockito" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mockito-course" />
+  <component name="RunManager" selected="JUnit.SpyTest (1)">
+    <configuration name="ListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MockitoTutorialForBeginners" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.in28minutes.business.*" />
@@ -95,15 +109,45 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.in28minutes.business" />
-      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.TodoBusinessImplMockitoRulesTest" />
-      <option name="METHOD_NAME" value="usingMockito" />
+      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.ListTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpyTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MockitoTutorialForBeginners" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.in28minutes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.in28minutes" />
+      <option name="MAIN_CLASS_NAME" value="com.in28minutes.SpyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpyTest.creatingASpyOnArrayList_overridingSpecificMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MockitoTutorialForBeginners" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.in28minutes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.in28minutes" />
+      <option name="MAIN_CLASS_NAME" value="com.in28minutes.SpyTest" />
+      <option name="METHOD_NAME" value="creatingASpyOnArrayList_overridingSpecificMethods" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoBusinessImplMockitoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mockito-course" />
+    <configuration name="TodoBusinessImplMockitoTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MockitoTutorialForBeginners" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.in28minutes.business.*" />
@@ -117,8 +161,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoBusinessImplMockitoTest.usingMockito" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mockito-course" />
+    <configuration name="TodoBusinessImplStubTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MockitoTutorialForBeginners" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.in28minutes.business.*" />
@@ -126,36 +170,32 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.in28minutes.business" />
-      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.TodoBusinessImplMockitoTest" />
-      <option name="METHOD_NAME" value="usingMockito" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.TodoBusinessImplStubTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoBusinessImplMockitoTest.usingMockito_UsingBDD" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="true" type="JetRunConfigurationType">
       <module name="mockito-course" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.in28minutes.business.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.in28minutes.business" />
-      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.TodoBusinessImplMockitoTest" />
-      <option name="METHOD_NAME" value="usingMockito_UsingBDD" />
-      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="mockito-course" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TodoBusinessImplMockitoRulesTest.usingMockito" />
-        <item itemvalue="JUnit.TodoBusinessImplMockitoTest" />
-        <item itemvalue="JUnit.TodoBusinessImplMockitoTest.usingMockito" />
-        <item itemvalue="JUnit.TodoBusinessImplMockitoTest.usingMockito_UsingBDD" />
-        <item itemvalue="JUnit.HamcrestMatcherTest.basicHamcrestMatchers" />
+        <item itemvalue="JUnit.SpyTest (1)" />
+        <item itemvalue="JUnit.TodoBusinessImplStubTest" />
+        <item itemvalue="JUnit.TodoBusinessImplMockitoTest (1)" />
+        <item itemvalue="JUnit.ListTest" />
+        <item itemvalue="JUnit.SpyTest.creatingASpyOnArrayList_overridingSpecificMethods" />
       </list>
     </recent_temporary>
   </component>

@@ -6,11 +6,8 @@ package com.in28minutes.junit.model;
 public class ProductImpl implements Product {
 
     private long id;
-
     private String name;
-
     private ProductType type;
-
     private Amount amount;
 
     public ProductImpl(long id, String name, ProductType type, Amount amount) {

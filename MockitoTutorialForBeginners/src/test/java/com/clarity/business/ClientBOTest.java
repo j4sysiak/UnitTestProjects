@@ -29,16 +29,16 @@ public class ClientBOTest {
                 ProductType.BANK_GUARANTEE, new AmountImpl(
                 new BigDecimal("6.0"), Currency.EURO)));
 
-        Amount temp = clientBO.getClientProductsSum(products);
+        Amount amount = clientBO.getClientProductsSum(products);
 
-        assertEquals(Currency.EURO, temp.getCurrency());
-        assertEquals(new BigDecimal("11.0"), temp.getValue());
+        assertEquals(Currency.EURO, amount.getCurrency());
+        assertEquals(new BigDecimal("11.0"), amount.getValue());
     }
 
     @Test(expected = DifferentCurrenciesException.class)
     public void testClientProductSum1() throws DifferentCurrenciesException {
 
-        List<Product> products = new ArrayList<Product>();
+        List<Product> products = new ArrayList<>();
 
         products.add(new ProductImpl(100, "Product 15",
                 ProductType.BANK_GUARANTEE, new AmountImpl(
@@ -49,24 +49,24 @@ public class ClientBOTest {
                 new BigDecimal("6.0"), Currency.EURO)));
 
         @SuppressWarnings("unused")
-        Amount temp = null;
+        Amount amount = null;
 
-        temp = clientBO.getClientProductsSum(products);
+        amount = clientBO.getClientProductsSum(products);
     }
 
     @Test
     public void testClientProductSum2() {
 
-        List<Product> products = new ArrayList<Product>();
+        List<Product> products = new ArrayList<>();
 
-        Amount temp = null;
+        Amount amount = null;
 
         try {
-            temp = clientBO.getClientProductsSum(products);
+            amount = clientBO.getClientProductsSum(products);
         } catch (DifferentCurrenciesException e) {
         }
-        assertEquals(Currency.EURO, temp.getCurrency());
-        assertEquals(BigDecimal.ZERO, temp.getValue());
+        assertEquals(Currency.EURO, amount.getCurrency());
+        assertEquals(BigDecimal.ZERO, amount.getValue());
     }
 
 }

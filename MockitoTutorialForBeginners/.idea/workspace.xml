@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eeda1008-02d1-4078-a514-08045181b481" name="Changes" comment="04-12-2023 2241">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/clarity2/business/ClientBOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/ProductImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/ProductImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/clarity/business/ClientBOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/clarity/business/ClientBOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/in28minutes/junit/model/ProductImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/in28minutes/junit/model/ProductImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/clarity/business/ClientBOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/clarity/business/ClientBOTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +68,7 @@
       <recent name="com.in28minutes.business" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClientBOTest.testClientProductSum">
+  <component name="RunManager" selected="JUnit.ClientBOTest.testClientProductSum2">
     <configuration name="ClientBOTest.testClientProductSum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MockitoTutorialForBeginners" />
       <extension name="coverage">
@@ -76,6 +80,22 @@
       <option name="PACKAGE_NAME" value="com.clarity.business" />
       <option name="MAIN_CLASS_NAME" value="com.clarity.business.ClientBOTest" />
       <option name="METHOD_NAME" value="testClientProductSum" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientBOTest.testClientProductSum2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MockitoTutorialForBeginners" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.clarity.business.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.clarity.business" />
+      <option name="MAIN_CLASS_NAME" value="com.clarity.business.ClientBOTest" />
+      <option name="METHOD_NAME" value="testClientProductSum2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -111,22 +131,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpyTest.creatingASpyOnArrayList_overridingSpecificMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MockitoTutorialForBeginners" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.in28minutes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.in28minutes" />
-      <option name="MAIN_CLASS_NAME" value="com.in28minutes.SpyTest" />
-      <option name="METHOD_NAME" value="creatingASpyOnArrayList_overridingSpecificMethods" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TodoBusinessImplStubTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MockitoTutorialForBeginners" />
       <extension name="coverage">
@@ -157,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ClientBOTest.testClientProductSum2" />
         <item itemvalue="JUnit.ClientBOTest.testClientProductSum" />
         <item itemvalue="JUnit.SpyTest (1)" />
         <item itemvalue="JUnit.TodoBusinessImplStubTest" />
         <item itemvalue="JUnit.ListTest" />
-        <item itemvalue="JUnit.SpyTest.creatingASpyOnArrayList_overridingSpecificMethods" />
       </list>
     </recent_temporary>
   </component>
@@ -254,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701726118491</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="04-12-2023 2241">
+      <option name="closed" value="true" />
+      <created>1701726754263</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701726754263</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -281,6 +293,26 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/in28minutes/business/TodoBusinessImpl.java</url>
           <line>29</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/clarity/business/ClientBOTest.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/in28minutes/junit/business/ClientBOImpl.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/clarity/business/ClientBOTest.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/clarity/business/ClientBOTest.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

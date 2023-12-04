@@ -4,27 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eeda1008-02d1-4078-a514-08045181b481" name="Changes" comment="03-12-2023 1225">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/business/ClientBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/business/ClientBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/business/exception/DifferentCurrenciesException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/helper/StringHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/Amount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/AmountImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/ClientImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/ClientType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/Collateral.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/CollateralImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/CollateralType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/Currency.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/ProductImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/ProductType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/powermock/SystemUnderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/powermock/UtilityClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="eeda1008-02d1-4078-a514-08045181b481" name="Changes" comment="04-12-2023 2241">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/clarity2/business/ClientBOTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -78,16 +59,33 @@
       <recent name="com.in28minutes.data.api" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.in28minutes.junit.business" />
       <recent name="com.in28minutes.data.api" />
       <recent name="com.in28minutes.business" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SpyTest (1)">
+  <component name="RunManager" selected="JUnit.ClientBOTest.testClientProductSum">
+    <configuration name="ClientBOTest.testClientProductSum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MockitoTutorialForBeginners" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.clarity.business.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.clarity.business" />
+      <option name="MAIN_CLASS_NAME" value="com.clarity.business.ClientBOTest" />
+      <option name="METHOD_NAME" value="testClientProductSum" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MockitoTutorialForBeginners" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.in28minutes.junit.business.*" />
+          <option name="PATTERN" value="com.in28minutes.clarity.business.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,26 +127,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoBusinessImplMockitoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MockitoTutorialForBeginners" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.in28minutes.junit.business.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.in28minutes.business" />
-      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.TodoBusinessImplMockitoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TodoBusinessImplStubTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MockitoTutorialForBeginners" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.in28minutes.junit.business.*" />
+          <option name="PATTERN" value="com.in28minutes.clarity.business.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -174,6 +157,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ClientBOTest.testClientProductSum" />
         <item itemvalue="JUnit.SpyTest (1)" />
         <item itemvalue="JUnit.TodoBusinessImplStubTest" />
         <item itemvalue="JUnit.ListTest" />
@@ -262,14 +246,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701638310607</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="04-12-2023 2241">
+      <option name="closed" value="true" />
+      <created>1701726118491</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701726118491</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="29-11-2023 2207" />
     <MESSAGE value="02-12-2023 1656" />
     <MESSAGE value="03-12-2023 1225" />
-    <option name="LAST_COMMIT_MESSAGE" value="03-12-2023 1225" />
+    <MESSAGE value="04-12-2023 2241" />
+    <option name="LAST_COMMIT_MESSAGE" value="04-12-2023 2241" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

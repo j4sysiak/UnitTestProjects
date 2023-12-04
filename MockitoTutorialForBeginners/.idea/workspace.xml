@@ -5,43 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eeda1008-02d1-4078-a514-08045181b481" name="Changes" comment="03-12-2023 1225">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/SpyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/business/ClientBO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/business/ClientBOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/business/exception/DifferentCurrenciesException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/helper/StringHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/Amount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/AmountImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/ClientImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/ClientType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/Collateral.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/CollateralImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/CollateralType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/Currency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/ProductImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/ProductType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/powermock/SystemUnderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/powermock/UtilityClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step12.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/in28minutes/business/TodoBusinessImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/in28minutes/business/TodoBusinessImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/in28minutes/data/api/TodoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/in28minutes/data/api/TodoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.in28minutes.FirstMockitoTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.in28minutes.HamcrestMatcherTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.in28minutes.business.ListTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.in28minutes.business.TodoBusinessImplMockitoTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.in28minutes.business.TodoBusinessImplStubTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.in28minutes.FirstMockitoTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.in28minutes.HamcrestMatcherTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.in28minutes.business.ListTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.in28minutes.business.TodoBusinessImplMockitoTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.in28minutes.business.TodoBusinessImplStubTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/FirstMockitoTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/HamcrestMatcherTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/business/ListTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/business/TodoBusinessImplMockitoRulesTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/business/TodoBusinessImplMockitoTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/business/TodoBusinessImplStubTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/data/api/TodoServiceStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/Step13.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/Step14.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/Step15.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/Step16.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/Step17.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/Step18.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/StepReference.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/business/impl/src/main/java/com/in28minutes/example/layering/business/impl/client/ClientBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/business/impl/src/main/java/com/in28minutes/example/layering/business/impl/client/ClientBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/business/impl/src/test/java/com/in28minutes/example/layering/business/client/ClientBOMockitoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MockitoTutorialForBeginnersRealWorldExampleWithSpring/business/impl/src/test/java/com/in28minutes/example/layering/business/client/ClientBOMockitoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +87,7 @@
       <module name="MockitoTutorialForBeginners" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.in28minutes.business.*" />
+          <option name="PATTERN" value="com.in28minutes.junit.business.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -146,11 +129,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoBusinessImplMockitoTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TodoBusinessImplMockitoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MockitoTutorialForBeginners" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.in28minutes.business.*" />
+          <option name="PATTERN" value="com.in28minutes.junit.business.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -165,7 +148,7 @@
       <module name="MockitoTutorialForBeginners" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.in28minutes.business.*" />
+          <option name="PATTERN" value="com.in28minutes.junit.business.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -193,7 +176,6 @@
       <list>
         <item itemvalue="JUnit.SpyTest (1)" />
         <item itemvalue="JUnit.TodoBusinessImplStubTest" />
-        <item itemvalue="JUnit.TodoBusinessImplMockitoTest (1)" />
         <item itemvalue="JUnit.ListTest" />
         <item itemvalue="JUnit.SpyTest.creatingASpyOnArrayList_overridingSpecificMethods" />
       </list>
@@ -264,7 +246,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701603522151</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="03-12-2023 1225">
+      <option name="closed" value="true" />
+      <created>1701638271020</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701638271020</updated>
+    </task>
+    <task id="LOCAL-00009" summary="03-12-2023 1225">
+      <option name="closed" value="true" />
+      <created>1701638310607</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701638310607</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

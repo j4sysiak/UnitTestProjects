@@ -1,7 +1,6 @@
 package com.in28minutes.junit.helper;
 
 import java.util.Arrays;
-
 import org.junit.Test;
 
 public class ArraysTest {

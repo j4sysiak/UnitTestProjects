@@ -4,53 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eeda1008-02d1-4078-a514-08045181b481" name="Changes" comment="04-12-2023 2241">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/clarity/business/ClientBOTestRefactored.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoRulesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/ArraysCompareTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/ArraysTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/QuickBeforeAfterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/StringHelperParameterizedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/StringHelperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/suite/DummyTestSuite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/mockito/FirstMockitoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/mockito/ListTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/powermock/PowerMockitoMockingStaticMethodTest.java" afterDir="false" />
+    <list default="true" id="eeda1008-02d1-4078-a514-08045181b481" name="Changes" comment="06-12-2023 2152">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final_Sources/src/main/java/com/in28minutes/business/TodoBusinessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Sources/src/main/java/com/in28minutes/business/TodoBusinessImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final_Sources/src/main/java/com/in28minutes/data/api/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Sources/src/main/java/com/in28minutes/data/api/TodoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/business/TodoBusinessImplMockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/business/TodoBusinessImplMockTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoInjectMocksTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoInjectMocksTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/data/api/TodoServiceStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/data/api/TodoServiceStub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step02.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step02.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step03.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step03.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step04.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step04.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step05.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step05.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step06.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step06.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step07.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step07.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step08.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step08.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step09.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step09.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step10.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step10.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step11.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step11.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step13.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step13.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step15.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step15.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step16.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step16.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step17.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step17.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/business/TodoBusinessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/business/TodoBusinessImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/data/api/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/data/stub/TodoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/clarity/business/ClientBOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/clarity/business/ClientBOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/FirstMockitoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/HamcrestMatcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/mockito/HamcrestMatcherTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/SpyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/mockito/SpyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/ListTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/data/api/TodoServiceStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/data/stub/TodoServiceStub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/in28minutes/data/api/TodoService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/clarity/business/ClientBOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/clarity/business/ClientBOTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/HamcrestMatcherTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/SpyTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/data/api/TodoServiceStub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/data/stub/TodoServiceStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/data/stub/TodoServiceStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/ArraysCompareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/ArraysCompareTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/ArraysTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/ArraysTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/QuickBeforeAfterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/QuickBeforeAfterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/StringHelperParameterizedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/StringHelperParameterizedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/StringHelperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/StringHelperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/mockito/SpyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/mockito/SpyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/powermock/PowerMockitoTestingPrivateMethodTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/powermock/PowerMockitoTestingPrivateMethodTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,7 +274,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701726754263</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="06-12-2023 2152">
+      <option name="closed" value="true" />
+      <created>1701896004885</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701896004885</updated>
+    </task>
+    <task id="LOCAL-00013" summary="06-12-2023 2152">
+      <option name="closed" value="true" />
+      <created>1701896208239</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1701896208239</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -317,7 +298,8 @@
     <MESSAGE value="02-12-2023 1656" />
     <MESSAGE value="03-12-2023 1225" />
     <MESSAGE value="04-12-2023 2241" />
-    <option name="LAST_COMMIT_MESSAGE" value="04-12-2023 2241" />
+    <MESSAGE value="06-12-2023 2152" />
+    <option name="LAST_COMMIT_MESSAGE" value="06-12-2023 2152" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

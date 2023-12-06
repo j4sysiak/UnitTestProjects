@@ -1,6 +1,5 @@
 package com.in28minutes.business;
 
-
 import com.in28minutes.data.stub.TodoService;
 import com.in28minutes.data.stub.TodoServiceStub;
 import org.junit.jupiter.api.Test;

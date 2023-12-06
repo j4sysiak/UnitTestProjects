@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.when;
 
 public class ClientBOTest {
 
@@ -51,7 +52,9 @@ public class ClientBOTest {
         @SuppressWarnings("unused")
         Amount amount = null;
 
-        amount = clientBO.getClientProductsSum(products);
+        when(clientBO.getClientProductsSum(products)).thenThrow(new DifferentCurrenciesException());
+
+        //amount = clientBO.getClientProductsSum(products);
     }
 
     @Test

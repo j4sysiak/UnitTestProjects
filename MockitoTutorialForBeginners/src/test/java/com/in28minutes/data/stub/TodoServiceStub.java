@@ -1,7 +1,12 @@
-package com.in28minutes.data.api;
+package com.in28minutes.data.stub;
 
 import java.util.Arrays;
 import java.util.List;
+
+import java.util.Arrays;
+import java.util.List;
+
+import com.in28minutes.data.stub.TodoService;
 
 public class TodoServiceStub implements TodoService {
     public List<String> retrieveTodos(String user) {

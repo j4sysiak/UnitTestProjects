@@ -6,8 +6,8 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.in28minutes.data.api.TodoService;
-import com.in28minutes.data.api.TodoServiceStub;
+import com.in28minutes.data.stub.TodoService;
+import com.in28minutes.data.stub.TodoServiceStub;
 
 public class TodoBusinessImplStubTest {
 

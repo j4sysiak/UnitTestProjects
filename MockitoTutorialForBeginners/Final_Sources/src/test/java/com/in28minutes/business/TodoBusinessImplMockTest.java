@@ -16,7 +16,7 @@ import java.util.List;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 
-import com.in28minutes.data.api.TodoService;
+import com.in28minutes.data.stub.TodoService;
 
 public class TodoBusinessImplMockTest {
 	// What is mocking?

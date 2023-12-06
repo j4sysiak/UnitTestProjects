@@ -3,7 +3,7 @@ package com.in28minutes.business;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.in28minutes.data.api.TodoService;
+import com.in28minutes.data.stub.TodoService;
 
 //TodoBusinessImpl SUT
 //TodoService Dependency

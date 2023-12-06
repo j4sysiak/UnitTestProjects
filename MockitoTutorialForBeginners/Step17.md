@@ -66,7 +66,7 @@ package com.in28minutes.business;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.in28minutes.data.api.TodoService;
+import com.in28minutes.data.stub.TodoService;
 
 public class TodoBusinessImpl {
 
@@ -99,7 +99,7 @@ public class TodoBusinessImpl {
 ```
 ### /src/main/java/com/in28minutes/data/api/TodoService.java
 ```
-package com.in28minutes.data.api;
+package com.in28minutes.data.stub;
 
 import java.util.List;
 
@@ -906,7 +906,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import com.in28minutes.data.api.TodoService;
+import com.in28minutes.data.stub.TodoService;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TodoBusinessImplMockitoInjectMocksTest {
@@ -1005,7 +1005,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import com.in28minutes.data.api.TodoService;
+import com.in28minutes.data.stub.TodoService;
 
 public class TodoBusinessImplMockitoRulesTest {
 
@@ -1102,7 +1102,7 @@ import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
 
-import com.in28minutes.data.api.TodoService;
+import com.in28minutes.data.stub.TodoService;
 
 public class TodoBusinessImplMockitoTest {
 
@@ -1190,7 +1190,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.in28minutes.data.api.TodoService;
+import com.in28minutes.data.stub.TodoService;
 import com.in28minutes.data.stub.TodoServiceStub;
 
 public class TodoBusinessImplStubTest {
@@ -1212,7 +1212,7 @@ package com.in28minutes.data.stub;
 import java.util.Arrays;
 import java.util.List;
 
-import com.in28minutes.data.api.TodoService;
+import com.in28minutes.data.stub.TodoService;
 
 public class TodoServiceStub implements TodoService {
 	public List<String> retrieveTodos(String user) {

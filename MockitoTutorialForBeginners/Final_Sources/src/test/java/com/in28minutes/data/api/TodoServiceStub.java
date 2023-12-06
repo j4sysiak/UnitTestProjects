@@ -1,4 +1,4 @@
-package com.in28minutes.data.api;
+package com.in28minutes.data.stub;
 
 import java.util.Arrays;
 import java.util.List;

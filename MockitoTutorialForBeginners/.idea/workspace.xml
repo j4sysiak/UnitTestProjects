@@ -5,11 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eeda1008-02d1-4078-a514-08045181b481" name="Changes" comment="04-12-2023 2241">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/clarity/business/ClientBOTestRefactored.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoRulesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/ArraysCompareTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/ArraysTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/QuickBeforeAfterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/StringHelperParameterizedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/StringHelperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/suite/DummyTestSuite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/mockito/FirstMockitoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/mockito/ListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/powermock/PowerMockitoMockingStaticMethodTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/ProductImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/junit/model/ProductImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Final_Sources/src/main/java/com/in28minutes/business/TodoBusinessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Sources/src/main/java/com/in28minutes/business/TodoBusinessImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Final_Sources/src/main/java/com/in28minutes/data/api/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Sources/src/main/java/com/in28minutes/data/api/TodoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/business/TodoBusinessImplMockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/business/TodoBusinessImplMockTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoInjectMocksTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoInjectMocksTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/data/api/TodoServiceStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Sources/src/test/java/com/in28minutes/data/api/TodoServiceStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step02.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step02.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step03.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step03.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step04.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step04.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step05.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step05.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step06.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step06.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step07.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step07.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step08.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step08.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step09.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step09.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step10.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step10.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step11.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step11.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step13.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step13.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step15.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step15.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step16.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step16.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step17.md" beforeDir="false" afterPath="$PROJECT_DIR$/Step17.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/business/TodoBusinessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/business/TodoBusinessImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/in28minutes/data/api/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/in28minutes/data/stub/TodoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/clarity/business/ClientBOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/clarity/business/ClientBOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/in28minutes/junit/model/ProductImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/in28minutes/junit/model/ProductImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/FirstMockitoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/HamcrestMatcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/mockito/HamcrestMatcherTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/SpyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/mockito/SpyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplMockitoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/data/api/TodoServiceStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/data/stub/TodoServiceStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/in28minutes/data/api/TodoService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/clarity/business/ClientBOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/clarity/business/ClientBOTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/HamcrestMatcherTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/SpyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/in28minutes/data/api/TodoServiceStub.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +60,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -68,7 +109,23 @@
       <recent name="com.in28minutes.business" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClientBOTest.testClientProductSum2">
+  <component name="RunManager" selected="JUnit.ClientBOTestRefactored.testClientProductSum_NoProducts">
+    <configuration name="ClientBOTestRefactored.testClientProductSum_NoProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MockitoTutorialForBeginners" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.clarity.business.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.clarity.business" />
+      <option name="MAIN_CLASS_NAME" value="com.clarity.business.ClientBOTestRefactored" />
+      <option name="METHOD_NAME" value="testClientProductSum_NoProducts" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ClientBOTest.testClientProductSum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MockitoTutorialForBeginners" />
       <extension name="coverage">
@@ -80,6 +137,22 @@
       <option name="PACKAGE_NAME" value="com.clarity.business" />
       <option name="MAIN_CLASS_NAME" value="com.clarity.business.ClientBOTest" />
       <option name="METHOD_NAME" value="testClientProductSum" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientBOTest.testClientProductSum1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MockitoTutorialForBeginners" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.clarity.business.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.clarity.business" />
+      <option name="MAIN_CLASS_NAME" value="com.clarity.business.ClientBOTest" />
+      <option name="METHOD_NAME" value="testClientProductSum1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -101,46 +174,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SpyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MockitoTutorialForBeginners" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.in28minutes.clarity.business.*" />
+          <option name="PATTERN" value="com.in28minutes.mockito.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.in28minutes.business" />
-      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.ListTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SpyTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MockitoTutorialForBeginners" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.in28minutes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.in28minutes" />
-      <option name="MAIN_CLASS_NAME" value="com.in28minutes.SpyTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TodoBusinessImplStubTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MockitoTutorialForBeginners" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.in28minutes.clarity.business.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.in28minutes.business" />
-      <option name="MAIN_CLASS_NAME" value="com.in28minutes.business.TodoBusinessImplStubTest" />
+      <option name="PACKAGE_NAME" value="com.in28minutes.mockito" />
+      <option name="MAIN_CLASS_NAME" value="com.in28minutes.mockito.SpyTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -161,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ClientBOTestRefactored.testClientProductSum_NoProducts" />
+        <item itemvalue="JUnit.ClientBOTest.testClientProductSum1" />
         <item itemvalue="JUnit.ClientBOTest.testClientProductSum2" />
         <item itemvalue="JUnit.ClientBOTest.testClientProductSum" />
         <item itemvalue="JUnit.SpyTest (1)" />
-        <item itemvalue="JUnit.TodoBusinessImplStubTest" />
-        <item itemvalue="JUnit.ListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -280,7 +323,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/in28minutes/data/api/TodoServiceStub.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/com/in28minutes/data/stub/TodoServiceStub.java</url>
           <line>6</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -296,23 +339,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/clarity/business/ClientBOTest.java</url>
-          <line>33</line>
+          <line>34</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/in28minutes/junit/business/ClientBOImpl.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/clarity/business/ClientBOTest.java</url>
-          <line>31</line>
+          <line>32</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/clarity/business/ClientBOTest.java</url>
-          <line>61</line>
+          <line>64</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/clarity/business/ClientBOTest.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

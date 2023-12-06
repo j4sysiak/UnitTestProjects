@@ -21,7 +21,7 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import com.in28minutes.data.api.TodoService;
+import com.in28minutes.data.stub.TodoService;
 
 public class TodoBusinessImplMockitoInjectMocksTest {
 

@@ -35,7 +35,7 @@ package com.in28minutes.business;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.in28minutes.data.api.TodoService;
+import com.in28minutes.data.stub.TodoService;
 
 public class TodoBusinessImpl {
 	private TodoService todoService;
@@ -58,7 +58,7 @@ public class TodoBusinessImpl {
 ```
 ### /src/main/java/com/in28minutes/data/api/TodoService.java
 ```
-package com.in28minutes.data.api;
+package com.in28minutes.data.stub;
 
 import java.util.List;
 

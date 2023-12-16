@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eeda1008-02d1-4078-a514-08045181b481" name="Changes" comment="06-12-2023 2152">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/ListTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/business/TodoBusinessImplStubTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/data/stub/TodoServiceStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/data/stub/TodoServiceStub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/ArraysCompareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/ArraysCompareTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/ArraysTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/ArraysTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/QuickBeforeAfterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/QuickBeforeAfterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/StringHelperParameterizedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/StringHelperParameterizedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/StringHelperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/junit/helper/StringHelperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/mockito/SpyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/mockito/SpyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/in28minutes/powermock/PowerMockitoTestingPrivateMethodTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/in28minutes/powermock/PowerMockitoTestingPrivateMethodTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="eeda1008-02d1-4078-a514-08045181b481" name="Changes" comment="12-12-2023 2152" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -289,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701896208239</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="12-12-2023 2152">
+      <option name="closed" value="true" />
+      <created>1702412460611</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702412460611</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -298,7 +294,8 @@
     <MESSAGE value="03-12-2023 1225" />
     <MESSAGE value="04-12-2023 2241" />
     <MESSAGE value="06-12-2023 2152" />
-    <option name="LAST_COMMIT_MESSAGE" value="06-12-2023 2152" />
+    <MESSAGE value="12-12-2023 2152" />
+    <option name="LAST_COMMIT_MESSAGE" value="12-12-2023 2152" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

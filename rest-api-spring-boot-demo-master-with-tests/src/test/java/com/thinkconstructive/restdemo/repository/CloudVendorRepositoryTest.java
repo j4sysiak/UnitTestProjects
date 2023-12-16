@@ -18,23 +18,22 @@ public class CloudVendorRepositoryTest {
 
     @Autowired
     private CloudVendorRepository cloudVendorRepository;
+
     CloudVendor cloudVendor;
 
     @BeforeEach
     void setUp() {
-        cloudVendor = new CloudVendor("1","Amazon",
-                "USA", "xxxxx");
-        cloudVendorRepository.save(cloudVendor);
+        cloudVendor = new CloudVendor("1", "Amazon", "USA", "xxxxx");
+        cloudVendorRepository.save(cloudVendor);  // set/save data of vendor to H2
     }
 
     @AfterEach
     void tearDown() {
         cloudVendor = null;
-        cloudVendorRepository.deleteAll();
+        cloudVendorRepository.deleteAll();  // clear data of vendor in H2
     }
 
-    // Test case SUCCESS
-
+    // Test case SUCCESS scenario
     @Test
     void testFindByVendorName_Found()
     {
@@ -44,7 +43,7 @@ public class CloudVendorRepositoryTest {
                 .isEqualTo(cloudVendor.getVendorAddress());
     }
 
-    // Test case FAILURE
+    // Test case FAILURE scenario
     @Test
     void testFindByVendorName_NotFound()
     {

@@ -69,8 +69,7 @@ class StudentServiceTest {
                 Gender.FEMALE
         );
 
-        given(studentRepository.selectExistsEmail(anyString()))
-                .willReturn(true);
+        given(studentRepository.selectExistsEmail(anyString())).willReturn(true);
 
         // when
         // then

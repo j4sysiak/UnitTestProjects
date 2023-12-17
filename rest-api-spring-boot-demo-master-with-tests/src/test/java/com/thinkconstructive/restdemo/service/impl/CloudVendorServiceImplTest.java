@@ -23,6 +23,7 @@ class CloudVendorServiceImplTest {
 
     @Mock
     private CloudVendorRepository cloudVendorRepository;
+    
     private CloudVendorService cloudVendorService;
     AutoCloseable autoCloseable;
     CloudVendor cloudVendor;
@@ -31,8 +32,7 @@ class CloudVendorServiceImplTest {
     void setUp() {
         autoCloseable = MockitoAnnotations.openMocks(this);
         cloudVendorService = new CloudVendorServiceImpl(cloudVendorRepository);
-        cloudVendor = new CloudVendor("1", "Amazon",
-                "USA", "xxxxx");
+        cloudVendor = new CloudVendor("1", "Amazon", "USA", "xxxxx");
     }
 
     @AfterEach

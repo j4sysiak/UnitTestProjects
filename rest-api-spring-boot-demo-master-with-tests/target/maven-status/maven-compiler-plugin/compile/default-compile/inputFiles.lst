@@ -1,0 +1,11 @@
+C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\rest-api-spring-boot-demo-master-with-tests\src\main\java\com\thinkconstructive\restdemo\repository\CloudVendorRepository.java
+C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\rest-api-spring-boot-demo-master-with-tests\src\main\java\com\thinkconstructive\restdemo\service\CloudVendorService.java
+C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\rest-api-spring-boot-demo-master-with-tests\src\main\java\com\thinkconstructive\restdemo\monitoring\DummyServiceHealthCheck.java
+C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\rest-api-spring-boot-demo-master-with-tests\src\main\java\com\thinkconstructive\restdemo\service\impl\CloudVendorServiceImpl.java
+C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\rest-api-spring-boot-demo-master-with-tests\src\main\java\com\thinkconstructive\restdemo\exception\CloudVendorNotFoundException.java
+C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\rest-api-spring-boot-demo-master-with-tests\src\main\java\com\thinkconstructive\restdemo\controller\CloudVendorController.java
+C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\rest-api-spring-boot-demo-master-with-tests\src\main\java\com\thinkconstructive\restdemo\RestDemoApplication.java
+C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\rest-api-spring-boot-demo-master-with-tests\src\main\java\com\thinkconstructive\restdemo\exception\CloudVendorExceptionHandler.java
+C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\rest-api-spring-boot-demo-master-with-tests\src\main\java\com\thinkconstructive\restdemo\model\CloudVendor.java
+C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\rest-api-spring-boot-demo-master-with-tests\src\main\java\com\thinkconstructive\restdemo\response\ResponseHandler.java
+C:\Users\Jacek\Documents\JAVA\SpringBoot\UnitTestProjects\rest-api-spring-boot-demo-master-with-tests\src\main\java\com\thinkconstructive\restdemo\exception\CloudVendorException.java

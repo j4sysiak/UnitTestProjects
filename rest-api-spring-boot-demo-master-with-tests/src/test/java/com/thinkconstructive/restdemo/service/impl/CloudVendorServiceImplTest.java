@@ -48,7 +48,6 @@ class CloudVendorServiceImplTest {
 
         when(cloudVendorRepository.save(cloudVendor)).thenReturn(cloudVendor);
         assertThat(cloudVendorService.createCloudVendor(cloudVendor)).isEqualTo("Success");
-
     }
 
     @Test
@@ -87,8 +86,12 @@ class CloudVendorServiceImplTest {
         mock(CloudVendor.class);
         mock(CloudVendorRepository.class);
 
+
         when(cloudVendorRepository.findByVendorName("Amazon")).
-                thenReturn(new ArrayList<CloudVendor>((Collection<? extends CloudVendor>) cloudVendor));
+                thenReturn(new ArrayList<CloudVendor>(Collections.singleton(cloudVendor)));
+//                 lub
+//        when(cloudVendorRepository.findByVendorName("Amazon")).
+//                thenReturn(new ArrayList<CloudVendor>((Collection<? extends CloudVendor>) cloudVendor));
 
         assertThat(cloudVendorService.getByVendorName("Amazon").get(0).getVendorId()).
                 isEqualTo(cloudVendor.getVendorId());
@@ -110,3 +113,34 @@ class CloudVendorServiceImplTest {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

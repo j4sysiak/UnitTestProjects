@@ -17,12 +17,8 @@ public class CloudVendorRepositoryTest {
     //  given - when - then
 
     @Autowired
-    private CloudVendorRepository cloudVendorRepository;
+    private CloudVendorRepository cloudVendorRepository = null;
     CloudVendor cloudVendor;
-
-    public CloudVendorRepositoryTest(CloudVendorRepository cloudVendorRepository) {
-        this.cloudVendorRepository = cloudVendorRepository;
-    }
 
     @BeforeEach
     void setUp() {

@@ -20,41 +20,41 @@ public class CloudVendorServiceImpl implements CloudVendorService {
     @Override
     public String createCloudVendor(CloudVendor cloudVendor) {
         // More Business Logic
-        cloudVendorRepository.save(cloudVendor);
+        this.cloudVendorRepository.save(cloudVendor);
         return "Success";
     }
 
     @Override
     public String updateCloudVendor(CloudVendor cloudVendor) {
         // More Business Logic
-        cloudVendorRepository.save(cloudVendor);
+        this.cloudVendorRepository.save(cloudVendor);
         return "Success";
     }
 
     @Override
     public String deleteCloudVendor(String cloudVendorId) {
         // More Business Logic
-        cloudVendorRepository.deleteById(cloudVendorId);
+        this.cloudVendorRepository.deleteById(cloudVendorId);
         return "Success";
     }
 
     @Override
     public CloudVendor getCloudVendor(String cloudVendorId) {
         // More Business Logic
-        if(cloudVendorRepository.findById(cloudVendorId).isEmpty())
+        if(this.cloudVendorRepository.findById(cloudVendorId).isEmpty())
             throw new CloudVendorNotFoundException("Requested Cloud Vendor does not exist");
-        return cloudVendorRepository.findById(cloudVendorId).get();
+        return this.cloudVendorRepository.findById(cloudVendorId).get();
     }
 
     @Override
     public List<CloudVendor> getAllCloudVendors() {
         // More Business Logic
-        return cloudVendorRepository.findAll();
+        return this.cloudVendorRepository.findAll();
     }
 
     @Override
     public List<CloudVendor> getByVendorName(String vendorName)
     {
-        return cloudVendorRepository.findByVendorName(vendorName);
+        return this.cloudVendorRepository.findByVendorName(vendorName);
     }
 }

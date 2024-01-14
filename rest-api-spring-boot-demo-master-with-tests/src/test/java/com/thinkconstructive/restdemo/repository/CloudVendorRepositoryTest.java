@@ -20,6 +20,10 @@ public class CloudVendorRepositoryTest {
     private CloudVendorRepository cloudVendorRepository;
     CloudVendor cloudVendor;
 
+    public CloudVendorRepositoryTest(CloudVendorRepository cloudVendorRepository) {
+        this.cloudVendorRepository = cloudVendorRepository;
+    }
+
     @BeforeEach
     void setUp() {
         cloudVendor = new CloudVendor("1", "Amazon", "USA", "xxxxx");

@@ -12,6 +12,7 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Optional;
 
@@ -23,7 +24,7 @@ class CloudVendorServiceImplTest {
 
     @Mock
     private CloudVendorRepository cloudVendorRepository;
-    
+
     private CloudVendorService cloudVendorService;
     AutoCloseable autoCloseable;
     CloudVendor cloudVendor;
@@ -64,9 +65,9 @@ class CloudVendorServiceImplTest {
         mock(CloudVendor.class);
         mock(CloudVendorRepository.class, Mockito.CALLS_REAL_METHODS);
 
-        doAnswer(Answers.CALLS_REAL_METHODS).when(cloudVendorRepository)
-                .deleteById(any());
-        assertThat(cloudVendorService.deleteCloudVendor("1")).isEqualTo("Success");
+        doAnswer(Answers.CALLS_REAL_METHODS).when(cloudVendorRepository).deleteById(any());
+        assertThat(cloudVendorService.deleteCloudVendor("1"))
+                .isEqualTo("Success");
     }
 
     @Test
@@ -74,7 +75,8 @@ class CloudVendorServiceImplTest {
         mock(CloudVendor.class);
         mock(CloudVendorRepository.class);
 
-        when(cloudVendorRepository.findById("1")).thenReturn(Optional.ofNullable(cloudVendor));
+        when(cloudVendorRepository.findById("1"))
+                .thenReturn(Optional.ofNullable(cloudVendor));
 
         assertThat(cloudVendorService.getCloudVendor("1").getVendorName())
                 .isEqualTo(cloudVendor.getVendorName());
@@ -86,7 +88,7 @@ class CloudVendorServiceImplTest {
         mock(CloudVendorRepository.class);
 
         when(cloudVendorRepository.findByVendorName("Amazon")).
-                thenReturn(new ArrayList<CloudVendor>(Collections.singleton(cloudVendor)));
+                thenReturn(new ArrayList<CloudVendor>((Collection<? extends CloudVendor>) cloudVendor));
 
         assertThat(cloudVendorService.getByVendorName("Amazon").get(0).getVendorId()).
                 isEqualTo(cloudVendor.getVendorId());

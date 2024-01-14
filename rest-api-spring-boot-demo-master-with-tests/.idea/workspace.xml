@@ -47,22 +47,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.CloudVendorServiceImplTest.testGetByVendorName">
-    <configuration name="CloudVendorRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rest-demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.thinkconstructive.restdemo.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.thinkconstructive.restdemo.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.thinkconstructive.restdemo.repository.CloudVendorRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.CloudVendorServiceImplTest.testGetAllCloudVendors">
     <configuration name="CloudVendorServiceImplTest.testCreateCloudVendor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rest-demo" />
       <extension name="coverage">
@@ -74,6 +59,22 @@
       <option name="PACKAGE_NAME" value="com.thinkconstructive.restdemo.service.impl" />
       <option name="MAIN_CLASS_NAME" value="com.thinkconstructive.restdemo.service.impl.CloudVendorServiceImplTest" />
       <option name="METHOD_NAME" value="testCreateCloudVendor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudVendorServiceImplTest.testGetAllCloudVendors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rest-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.thinkconstructive.restdemo.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.thinkconstructive.restdemo.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.thinkconstructive.restdemo.service.impl.CloudVendorServiceImplTest" />
+      <option name="METHOD_NAME" value="testGetAllCloudVendors" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CloudVendorServiceImplTest.testGetByVendorName" />
+        <item itemvalue="JUnit.CloudVendorServiceImplTest.testGetAllCloudVendors" />
         <item itemvalue="JUnit.CloudVendorServiceImplTest.testGetCloudVendor" />
+        <item itemvalue="JUnit.CloudVendorServiceImplTest.testGetByVendorName" />
         <item itemvalue="JUnit.CloudVendorServiceImplTest.testUpdateCloudVendor" />
         <item itemvalue="JUnit.CloudVendorServiceImplTest.testCreateCloudVendor" />
-        <item itemvalue="JUnit.CloudVendorRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705232885112</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="14-01-2024 1239">
+      <option name="closed" value="true" />
+      <created>1705234050239</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705234050239</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -209,6 +218,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/thinkconstructive/restdemo/service/impl/CloudVendorServiceImpl.java</url>
           <line>29</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/thinkconstructive/restdemo/service/impl/CloudVendorServiceImplTest.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

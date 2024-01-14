@@ -86,7 +86,6 @@ class CloudVendorServiceImplTest {
         mock(CloudVendor.class);
         mock(CloudVendorRepository.class);
 
-
         when(cloudVendorRepository.findByVendorName("Amazon")).
                 thenReturn(new ArrayList<CloudVendor>(Collections.singleton(cloudVendor)));
 //                 lub
